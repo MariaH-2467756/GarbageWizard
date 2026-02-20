@@ -1,0 +1,130 @@
+[gd_scene load_steps=6 format=3 uid="uid://br3o4a0jh2n00"]
+
+[ext_resource type="PackedScene" uid="uid://dnywyyt7emgl" path="res://wizard.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://iwb261nlsadv" path="res://icon.svg" id="2_0xm2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(25, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(82, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(20, 44)
+
+[node name="Main" type="Node2D"]
+
+[node name="Wizard" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(0, 88)
+
+[node name="PortalRoom" type="Node2D" parent="."]
+
+[node name="Walls" type="Node2D" parent="PortalRoom"]
+
+[node name="wall" type="StaticBody2D" parent="PortalRoom/Walls"]
+position = Vector2(204, 204)
+rotation = 0.39269912
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Walls/wall"]
+rotation = 0.3926991
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="wall2" type="StaticBody2D" parent="PortalRoom/Walls"]
+position = Vector2(289, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Walls/wall2"]
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="wall3" type="StaticBody2D" parent="PortalRoom/Walls"]
+position = Vector2(203.99998, -205)
+rotation = -0.39269912
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Walls/wall3"]
+rotation = -0.3926991
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="wall4" type="StaticBody2D" parent="PortalRoom/Walls"]
+position = Vector2(0, 288)
+rotation = 0.7853982
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Walls/wall4"]
+rotation = 0.7853982
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="wall5" type="StaticBody2D" parent="PortalRoom/Walls"]
+position = Vector2(-204, 203)
+rotation = -0.39269912
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Walls/wall5"]
+rotation = -0.3926991
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="wall6" type="StaticBody2D" parent="PortalRoom/Walls"]
+position = Vector2(-288, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Walls/wall6"]
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="wall7" type="StaticBody2D" parent="PortalRoom/Walls"]
+position = Vector2(-204, -203.99997)
+rotation = 0.39269912
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Walls/wall7"]
+rotation = 0.3926991
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="wall8" type="StaticBody2D" parent="PortalRoom/Walls"]
+position = Vector2(0, -288)
+rotation = 0.7853982
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Walls/wall8"]
+rotation = 0.7853982
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="GarbageContainer" type="StaticBody2D" parent="PortalRoom"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/GarbageContainer"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalRoom/GarbageContainer"]
+position = Vector2(0.49999905, 0.50000095)
+scale = Vector2(0.64843744, 0.5078125)
+texture = ExtResource("2_0xm2m")
+
+[node name="Portals" type="Node2D" parent="PortalRoom"]
+
+[node name="Portal" type="StaticBody2D" parent="PortalRoom/Portals"]
+position = Vector2(-250, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Portals/Portal"]
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalRoom/Portals/Portal"]
+
+[node name="Portal2" type="StaticBody2D" parent="PortalRoom/Portals"]
+position = Vector2(250, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Portals/Portal2"]
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalRoom/Portals/Portal2"]
+
+[node name="Portal3" type="StaticBody2D" parent="PortalRoom/Portals"]
+position = Vector2(0, 250)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Portals/Portal3"]
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalRoom/Portals/Portal3"]
+
+[node name="Portal4" type="StaticBody2D" parent="PortalRoom/Portals"]
+position = Vector2(0, -250)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Portals/Portal4"]
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalRoom/Portals/Portal4"]
