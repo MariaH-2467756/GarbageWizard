@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://br3o4a0jh2n00"]
+[gd_scene load_steps=9 format=3 uid="uid://br3o4a0jh2n00"]
 
 [ext_resource type="PackedScene" uid="uid://dnywyyt7emgl" path="res://wizard.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://iwb261nlsadv" path="res://icon.svg" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://56cb8akhlvw4" path="res://portal.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cq0qi4r36nfjb" path="res://hedge_maze.tscn" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://c3loyy8qg70kt" path="res://green_floor.png" id="5_lquwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(25, 250)
@@ -95,13 +98,8 @@ texture = ExtResource("2_0xm2m")
 
 [node name="Portals" type="Node2D" parent="PortalRoom"]
 
-[node name="Portal" type="StaticBody2D" parent="PortalRoom/Portals"]
+[node name="Portal" parent="PortalRoom/Portals" instance=ExtResource("3_h2yge")]
 position = Vector2(-250, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalRoom/Portals/Portal"]
-shape = SubResource("RectangleShape2D_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="PortalRoom/Portals/Portal"]
 
 [node name="Portal2" type="StaticBody2D" parent="PortalRoom/Portals"]
 position = Vector2(250, 0)
@@ -128,3 +126,9 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_lquwl")
 
 [node name="Sprite2D" type="Sprite2D" parent="PortalRoom/Portals/Portal4"]
+
+[node name="HedgeMaze" parent="." instance=ExtResource("4_1bvp3")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture = ExtResource("5_lquwl")

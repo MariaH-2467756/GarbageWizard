@@ -1,12 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnywyyt7emgl"]
+[gd_scene load_steps=4 format=3 uid="uid://dnywyyt7emgl"]
+
+[ext_resource type="Texture2D" uid="uid://iwb261nlsadv" path="res://icon.svg" id="1_0isxx"]
+[ext_resource type="Script" uid="uid://ba1lks56abmnh" path="res://wizard.gd" id="1_xxhrx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6f53g"]
 
 [node name="Wizard" type="CharacterBody2D"]
+script = ExtResource("1_xxhrx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_6f53g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.5, 0.9999981)
+scale = Vector2(0.1640625, 0.28125)
+texture = ExtResource("1_0isxx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
