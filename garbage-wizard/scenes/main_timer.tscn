@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsjyb331beiot"]
+
+[ext_resource type="Script" uid="uid://b1gvs78a5k53o" path="res://main_timer.gd" id="1_j175b"]
+
+[node name="MainTimer" type="CanvasLayer"]
+script = ExtResource("1_j175b")
+
+[node name="Timer" type="Label" parent="."]
+offset_right = 94.0
+offset_bottom = 46.0
