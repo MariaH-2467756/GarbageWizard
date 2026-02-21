@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dbs2qmhnmpwke"]
+
+[ext_resource type="Texture2D" uid="uid://l22xlyrgxvqo" path="res://skatepark_assets/skater_rood_transparent.png" id="1_7aonn"]
+[ext_resource type="Script" uid="uid://p1e7ck6v4vtb" path="res://scripts/skater_mob.gd" id="1_ksumr"]
+[ext_resource type="Texture2D" uid="uid://bq7utj5b22psq" path="res://skatepark_assets/skater_rood_transparent_flipped.png" id="3_ult01"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yesdl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7aonn")
+}],
+"loop": true,
+"name": &"skate_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ult01")
+}],
+"loop": true,
+"name": &"skate_right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7aonn"]
+radius = 12.0
+height = 32.0
+
+[node name="SkaterMob" type="RigidBody2D" unique_id=416303636]
+gravity_scale = 0.0
+script = ExtResource("1_ksumr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=311636311]
+rotation = -1.5707964
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_yesdl")
+animation = &"skate_right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=866706140]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_7aonn")

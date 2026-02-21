@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cowti2n8sb5ep"]
+[gd_scene format=3 uid="uid://cowti2n8sb5ep"]
 
 [ext_resource type="Texture2D" uid="uid://b8o5it07c4pe6" path="res://Untitled.png" id="1_ae5me"]
-[ext_resource type="Script" uid="uid://dc4votw0x0177" path="res://garbage.gd" id="1_ylab2"]
+[ext_resource type="Script" uid="uid://dc4votw0x0177" path="res://scripts/garbage.gd" id="1_ylab2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ylab2"]
 

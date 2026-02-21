@@ -21,7 +21,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Wizard="*res://wizard.tscn"
+Wizard="*res://scenes/wizard.tscn"
 MainTimer="*res://scenes/main_timer.tscn"
 GameState="*res://scenes/game_state.tscn"
 

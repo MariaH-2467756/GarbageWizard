@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsjyb331beiot"]
+[gd_scene format=3 uid="uid://bsjyb331beiot"]
 
-[ext_resource type="Script" uid="uid://b1gvs78a5k53o" path="res://main_timer.gd" id="1_j175b"]
+[ext_resource type="Script" uid="uid://b1gvs78a5k53o" path="res://scripts/main_timer.gd" id="1_j175b"]
 
 [node name="MainTimer" type="CanvasLayer"]
 script = ExtResource("1_j175b")
