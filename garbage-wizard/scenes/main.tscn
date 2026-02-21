@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://br3o4a0jh2n00"]
+
+[ext_resource type="PackedScene" uid="uid://cgph3rfwmqoh8" path="res://scenes/game_state.tscn" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dnywyyt7emgl" path="res://wizard.tscn" id="2_tefeu"]
+[ext_resource type="PackedScene" uid="uid://mace7pl0dwb4" path="res://scenes/portal_room.tscn" id="3_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://cq0qi4r36nfjb" path="res://scenes/hedge_maze.tscn" id="4_tipki"]
+[ext_resource type="PackedScene" uid="uid://b7i6tvau8nhqp" path="res://scenes/forest.tscn" id="5_85g3d"]
+
+[node name="Main" type="Node2D"]
+
+[node name="GameState" parent="." instance=ExtResource("1_tbgi4")]
+
+[node name="Wizard" parent="." instance=ExtResource("2_tefeu")]
+visibility_layer = 31
+position = Vector2(0, 88)
+
+[node name="PortalRoom" parent="." instance=ExtResource("3_o6xl0")]
+
+[node name="HedgeMaze" parent="." instance=ExtResource("4_tipki")]
+
+[node name="Forest" parent="." instance=ExtResource("5_85g3d")]

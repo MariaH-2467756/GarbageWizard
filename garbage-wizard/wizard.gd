@@ -15,3 +15,12 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = input_vector.normalized() * speed
 	move_and_slide()
+
+# to show animation when garbage collected.
+func clean_garbage():
+	pass
+	
+
+#a function to call wel telporting with player animation.
+func teleport():
+	pass

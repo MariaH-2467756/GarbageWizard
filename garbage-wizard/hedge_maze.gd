@@ -1,11 +1,22 @@
 extends Node2D
-@export var garbage_collected = 0
-@export var garbage_max = 5
-@onready var timer_label = $TimerLayer/Time
 var portal_room = "res://scenes/portal_room.tscn"
+
+@onready var timer_label = $TimerLayer/Time
 var max_time = 300.0
 var time_elapsed = 0.0
 var time_left = 0.0
+
+#Garbage collection
+#######
+@export var garbage_max = 5 
+var garbage_collected = 0
+func on_trash_cleaned(garbage_id: String):
+	if (GameState.clean_trash(garbage_id)):
+		garbage_collected += 1
+		
+		if garbage_collected >= garbage_max:
+			get_tree().change_scene_to_file(portal_room)
+#######
 
 func _ready():
 	Wizard.position = Vector2(0, 0)

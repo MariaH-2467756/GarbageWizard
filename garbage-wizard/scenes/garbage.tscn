@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cowti2n8sb5ep"]
+[gd_scene load_steps=5 format=3 uid="uid://cowti2n8sb5ep"]
 
 [ext_resource type="Texture2D" uid="uid://b8o5it07c4pe6" path="res://Untitled.png" id="1_ae5me"]
+[ext_resource type="Script" uid="uid://dc4votw0x0177" path="res://garbage.gd" id="1_ylab2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ylab2"]
 
@@ -8,6 +9,7 @@
 radius = 30.016663
 
 [node name="Garbage" type="StaticBody2D"]
+script = ExtResource("1_ylab2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ylab2")
@@ -22,3 +24,7 @@ texture = ExtResource("1_ae5me")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_lauih")
+
+[node name="GarbageLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

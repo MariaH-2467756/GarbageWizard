@@ -1,7 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://mace7pl0dwb4"]
 
-[ext_resource type="Texture2D" uid="uid://iwb261nlsadv" path="res://icon.svg" id="1_ekn5w"]
+[ext_resource type="PackedScene" uid="uid://dafyoihjv1gpo" path="res://scenes/garbage_container.tscn" id="1_i2avm"]
 [ext_resource type="PackedScene" uid="uid://56cb8akhlvw4" path="res://scenes/portal.tscn" id="2_fapfg"]
+[ext_resource type="Script" uid="uid://bwiyrnh2ndjlt" path="res://scenes/garbage_container.gd" id="2_sl5as"]
 [ext_resource type="Script" uid="uid://bjr0dcyk0vv5w" path="res://portal.gd" id="3_wffui"]
 [ext_resource type="Texture2D" uid="uid://b8o5it07c4pe6" path="res://Untitled.png" id="4_bw4i1"]
 [ext_resource type="Texture2D" uid="uid://c300l0c8e1xjw" path="res://PortalRoomFLoor.png" id="5_sjhtw"]
@@ -11,9 +12,6 @@ size = Vector2(25, 382.00003)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
 size = Vector2(25, 437)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
-size = Vector2(82, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
 size = Vector2(20, 146)
@@ -88,15 +86,8 @@ position = Vector2(-1.7677612, 1.7677612)
 rotation = 0.7853982
 shape = SubResource("RectangleShape2D_7mycd")
 
-[node name="GarbageContainer" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GarbageContainer"]
-shape = SubResource("RectangleShape2D_1bvp3")
-
-[node name="Sprite2D" type="Sprite2D" parent="GarbageContainer"]
-position = Vector2(0.49999905, 0.50000095)
-scale = Vector2(0.64843744, 0.5078125)
-texture = ExtResource("1_ekn5w")
+[node name="GarbageContainer" parent="." instance=ExtResource("1_i2avm")]
+script = ExtResource("2_sl5as")
 
 [node name="Portals" type="Node2D" parent="."]
 

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Wizard="*res://wizard.tscn"
 MainTimer="*res://scenes/main_timer.tscn"
+GameState="*res://scenes/game_state.tscn"
 
 [editor]
 
