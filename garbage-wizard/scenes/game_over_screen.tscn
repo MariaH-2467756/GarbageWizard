@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cljqnurqsd5ui"]
 
+[ext_resource type="Script" uid="uid://clr7yci5b7i4d" path="res://scenes/game_over_screen.gd" id="1_61w2s"]
 [ext_resource type="FontFile" uid="uid://dbad0n42iah6j" path="res://fonts/Aurora.otf" id="1_gt22q"]
-[ext_resource type="Script" uid="uid://c8nnngh21klxx" path="res://game_over_screen.gd" id="1_w3hxg"]
 
 [node name="GameOverScreen" type="CanvasLayer" unique_id=1226748876]
-script = ExtResource("1_w3hxg")
+script = ExtResource("1_61w2s")
 
 [node name="Title" type="Label" parent="." unique_id=315848543]
 anchors_preset = 8

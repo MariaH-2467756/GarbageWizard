@@ -1,21 +1,29 @@
 [gd_scene format=3 uid="uid://dnywyyt7emgl"]
 
-[ext_resource type="Texture2D" uid="uid://iwb261nlsadv" path="res://icon.svg" id="1_0isxx"]
 [ext_resource type="Script" uid="uid://ba1lks56abmnh" path="res://scripts/wizard.gd" id="1_xxhrx"]
+[ext_resource type="Texture2D" uid="uid://cs4uqk22ai4ow" path="res://merlin_transparent.png" id="2_leome"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6f53g"]
-radius = 20.0
-height = 70.0
+radius = 22.0
+height = 84.0
 
-[node name="Wizard" type="CharacterBody2D"]
+[node name="Wizard" type="CharacterBody2D" unique_id=1782572100]
 script = ExtResource("1_xxhrx")
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=592127807]
+visible = false
+position = Vector2(-4, 0)
 shape = SubResource("CapsuleShape2D_6f53g")
+metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(4.7683716e-07, -0.49999857)
-scale = Vector2(0.28125, 0.5234375)
-texture = ExtResource("1_0isxx")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2142553551]
+position = Vector2(0, -1.1920929e-07)
+scale = Vector2(0.18, 0.173)
+texture = ExtResource("2_leome")
+metadata/_edit_lock_ = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=173356734]
+position = Vector2(-4, 0)
+process_callback = 0
+metadata/_edit_lock_ = true

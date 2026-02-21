@@ -2,22 +2,43 @@
 
 [ext_resource type="PackedScene" uid="uid://cgph3rfwmqoh8" path="res://scenes/game_state.tscn" id="1_tbgi4"]
 [ext_resource type="Script" uid="uid://dch44c1o18bn2" path="res://scripts/main.gd" id="1_tefeu"]
-[ext_resource type="PackedScene" uid="uid://dnywyyt7emgl" path="res://scenes/wizard.tscn" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://mace7pl0dwb4" path="res://scenes/portal_room.tscn" id="3_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://cq0qi4r36nfjb" path="res://scenes/hedge_maze.tscn" id="4_tipki"]
 [ext_resource type="PackedScene" uid="uid://b7i6tvau8nhqp" path="res://scenes/forest.tscn" id="5_85g3d"]
+[ext_resource type="PackedScene" uid="uid://dojq78od07ryv" path="res://scenes/skatepark.tscn" id="6_85g3d"]
+[ext_resource type="PackedScene" uid="uid://dq1vvx8mtu6rp" path="res://scenes/title_screen.tscn" id="7_tipki"]
+[ext_resource type="PackedScene" uid="uid://cljqnurqsd5ui" path="res://scenes/game_over_screen.tscn" id="8_85g3d"]
+[ext_resource type="Script" uid="uid://bdgmsvl1hcvxj" path="res://scenes/start_position.gd" id="9_85g3d"]
 
 [node name="Main" type="Node2D" unique_id=2020212354]
 script = ExtResource("1_tefeu")
 
 [node name="GameState" parent="." unique_id=870998641 instance=ExtResource("1_tbgi4")]
 
-[node name="Wizard" parent="." unique_id=583640012 instance=ExtResource("2_tefeu")]
-visibility_layer = 31
-position = Vector2(0, 88)
+[node name="HedgeMaze" parent="." unique_id=689054191 instance=ExtResource("4_tipki")]
+visible = false
+metadata/_edit_lock_ = true
 
 [node name="PortalRoom" parent="." unique_id=1305623523 instance=ExtResource("3_o6xl0")]
-
-[node name="HedgeMaze" parent="." unique_id=689054191 instance=ExtResource("4_tipki")]
+metadata/_edit_lock_ = true
 
 [node name="Forest" parent="." unique_id=1487161685 instance=ExtResource("5_85g3d")]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="Skatepark" parent="." unique_id=98383834 instance=ExtResource("6_85g3d")]
+visible = false
+
+[node name="TitleScreen" parent="." unique_id=1964465023 instance=ExtResource("7_tipki")]
+visible = false
+
+[node name="GameOverScreen" parent="." unique_id=1226748876 instance=ExtResource("8_85g3d")]
+visible = false
+
+[node name="StartPosition" type="Marker2D" parent="." unique_id=955269928]
+position = Vector2(-77, 2)
+script = ExtResource("9_85g3d")
+metadata/_edit_lock_ = true
+
+[connection signal="start_game" from="TitleScreen" to="." method="new_game"]
+[connection signal="homepage" from="GameOverScreen" to="." method="open_titlescreen"]

@@ -3,9 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://dafyoihjv1gpo" path="res://scenes/garbage_container.tscn" id="1_i2avm"]
 [ext_resource type="PackedScene" uid="uid://56cb8akhlvw4" path="res://scenes/portal.tscn" id="2_fapfg"]
 [ext_resource type="Script" uid="uid://bwiyrnh2ndjlt" path="res://scripts/garbage_container.gd" id="2_sl5as"]
-[ext_resource type="Script" uid="uid://bjr0dcyk0vv5w" path="res://scripts/portal.gd" id="3_wffui"]
 [ext_resource type="Texture2D" uid="uid://b8o5it07c4pe6" path="res://Untitled.png" id="4_bw4i1"]
+[ext_resource type="Script" uid="uid://ky3x43kq0diw" path="res://scenes/portal_2.gd" id="4_sl5as"]
 [ext_resource type="Texture2D" uid="uid://c300l0c8e1xjw" path="res://PortalRoomFLoor.png" id="5_sjhtw"]
+[ext_resource type="Script" uid="uid://byiaoptqtitxu" path="res://scenes/portal_3.gd" id="6_nwsrt"]
+[ext_resource type="Script" uid="uid://56nyaujnlvp3" path="res://scenes/portal_4.gd" id="7_nwsrt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(25, 382.00003)
@@ -97,7 +99,7 @@ position = Vector2(-471, -55)
 [node name="Portal2" type="StaticBody2D" parent="Portals" unique_id=1173953545]
 position = Vector2(-16, 393)
 rotation = 1.5707964
-script = ExtResource("3_wffui")
+script = ExtResource("4_sl5as")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portals/Portal2" unique_id=58044449]
 position = Vector2(0, 1)
@@ -125,7 +127,7 @@ rotation = -1.5707964
 [node name="Portal3" type="StaticBody2D" parent="Portals" unique_id=2072252880]
 position = Vector2(-23, -470)
 rotation = 1.5707964
-script = ExtResource("3_wffui")
+script = ExtResource("6_nwsrt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portals/Portal3" unique_id=1316194772]
 position = Vector2(0, 1)
@@ -152,7 +154,7 @@ rotation = -1.5707964
 
 [node name="Portal4" type="StaticBody2D" parent="Portals" unique_id=2091459421]
 position = Vector2(356, -9)
-script = ExtResource("3_wffui")
+script = ExtResource("7_nwsrt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portals/Portal4" unique_id=1060275321]
 position = Vector2(0, 1)

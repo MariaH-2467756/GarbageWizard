@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dq1vvx8mtu6rp"]
 
-[ext_resource type="Script" uid="uid://cb11je61uiae7" path="res://title_screen.gd" id="1_ak2if"]
+[ext_resource type="Script" uid="uid://de1my5leylfie" path="res://scenes/title_screen.gd" id="1_sa3yf"]
 [ext_resource type="FontFile" uid="uid://dbad0n42iah6j" path="res://fonts/Aurora.otf" id="1_v6p8y"]
 
 [node name="TitleScreen" type="CanvasLayer" unique_id=1964465023]
-script = ExtResource("1_ak2if")
+script = ExtResource("1_sa3yf")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1006912546]
 offset_right = 2000.0

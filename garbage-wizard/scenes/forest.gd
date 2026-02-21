@@ -1,12 +1,11 @@
 extends Node2D
 
-@export var garbage_max = 5 
-var garbage_collected = 0
+@export var garbage_max = 5
+var garbage_collected = 0 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var bound = 400
-	$SkaterMob.set_values(100, 0.5, bound) # voor elke skater zetten, 
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

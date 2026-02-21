@@ -23,7 +23,6 @@ func _process(delta: float) -> void:
 	mob_movement(delta)
 
 
-
 func mob_movement(delta: float) -> void:
 	var input_vector = Vector2.UP
 	

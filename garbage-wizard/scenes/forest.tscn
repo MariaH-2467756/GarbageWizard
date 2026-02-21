@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://b7i6tvau8nhqp"]
 
-[node name="Forest" type="Node2D"]
+[ext_resource type="Script" uid="uid://cenebennp4kdu" path="res://scenes/forest.gd" id="1_xijx7"]
 
-[node name="Trees" type="Node2D" parent="."]
+[node name="Forest" type="Node2D" unique_id=756021440]
+script = ExtResource("1_xijx7")
+
+[node name="Trees" type="Node2D" parent="." unique_id=2085645410]

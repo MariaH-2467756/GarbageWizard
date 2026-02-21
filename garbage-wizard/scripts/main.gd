@@ -3,30 +3,34 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Wizard.hide()
 	open_titlescreen()
 	
-	#debug tool
-	# await get_tree().create_timer(3).timeout
+	# debug tool
+	# await get_tree().create_timer(10).timeout
 	# $Wizard.die()
 
 func wizard_health_check() -> void:
 	if $Wizard.health <= 0:
 		game_over()
 	else: # return to start position (health gets decreased in $Wizard)
-		$Wizard.position = $StartPosition.position + Vector2(50, 50)
+		$Wizard.position = $StartPosition.position
 
 func game_over() -> void:
-	# var position_wizard = $Wizard.position
 	$Wizard.hide()
-	# $GameOverScreen.offset = position_wizard
 	$GameOverScreen.show()
-	$Wizard.delete()
+	$Wizard.position = $StartPosition.position
+	$Wizard.disable_controls()
 
 func new_game() -> void:
+	var health = 3
 	$TitleScreen.hide()
-	$Wizard.start($StartPosition.position)
+	# $Wizard.start($StartPosition.position, health)
 
 func open_titlescreen() -> void:
 	$GameOverScreen.hide()
 	$TitleScreen.show()
+	
+	#a function to call wel telporting with player animation.
+func teleport():
+	await (get_tree().create_timer(1).timeout)
+	$Wizard.position = $StartPosition

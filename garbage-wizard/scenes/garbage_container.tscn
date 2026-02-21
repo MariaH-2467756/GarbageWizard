@@ -16,5 +16,8 @@ scale = Vector2(0.64843744, 0.5078125)
 texture = ExtResource("1_aqk1d")
 
 [node name="GarbageLabel" type="Label" parent="." unique_id=45618789]
-offset_right = 40.0
-offset_bottom = 23.0
+anchors_preset = -1
+offset_left = -20.0
+offset_top = -64.0
+offset_right = 20.0
+offset_bottom = -41.0

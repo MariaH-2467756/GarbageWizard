@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bu8ytan858hve" path="res://scripts/skatepark.gd" id="1_ehus5"]
 [ext_resource type="Texture2D" uid="uid://6ppykkxo5q5j" path="res://skatepark_assets/skatepark.png" id="1_j1v41"]
 [ext_resource type="Texture2D" uid="uid://bcl6io73q5mhv" path="res://skatepark_assets/hek_skatepark.png" id="2_xea5g"]
-[ext_resource type="PackedScene" path="res://scenes/skater_mob.tscn" id="3_uaccq"]
+[ext_resource type="PackedScene" uid="uid://dbs2qmhnmpwke" path="res://scenes/skater_mob.tscn" id="3_uaccq"]
 [ext_resource type="PackedScene" uid="uid://dnywyyt7emgl" path="res://scenes/wizard.tscn" id="5_1q8cr"]
 
 [node name="Skatepark" type="Node2D" unique_id=98383834]
@@ -508,9 +508,7 @@ rotation = 0.23212878
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="SkaterMob" parent="." unique_id=416303636 instance=ExtResource("3_uaccq")]
-position = Vector2(84.00009, 124.000015)
-scale = Vector2(5, 5)
-script = null
-
 [node name="Wizard" parent="." unique_id=1373688230 instance=ExtResource("5_1q8cr")]
+
+[node name="SkaterMob" parent="." unique_id=416303636 instance=ExtResource("3_uaccq")]
+position = Vector2(409, 185)
