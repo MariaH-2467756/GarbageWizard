@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://bcpq06bf1bwsd"]
+
+[ext_resource type="Script" uid="uid://dgf7g0hi2m245" path="res://bee.gd" id="1_ir1wi"]
+[ext_resource type="Texture2D" uid="uid://5iwhkqjsbefo" path="res://2026_02_21_0u8_Kleki.png" id="2_120pq"]
+[ext_resource type="Texture2D" uid="uid://dtv361qgmbaj1" path="res://2026_02_21_0ud_Kleki.png" id="3_gulqx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_atyi6"]
+radius = 1250.314
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4dot8"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_50yv8"]
+radius = 5.2153616
+
+[node name="BeeHive" type="Node2D" unique_id=548601961]
+scale = Vector2(2.5, 2.5)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1970327414]
+scale = Vector2(2.4999998, 2.4999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1567424381]
+shape = SubResource("CircleShape2D_atyi6")
+metadata/_edit_lock_ = true
+
+[node name="Bee" type="CharacterBody2D" parent="." unique_id=1962099742]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_ir1wi")
+
+[node name="BeeShape" type="CollisionShape2D" parent="Bee" unique_id=843934477]
+position = Vector2(-1.0600004, -3.380002)
+scale = Vector2(0.02, 0.02)
+shape = SubResource("CapsuleShape2D_4dot8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bee" unique_id=1138345923]
+position = Vector2(0.9399998, 0.6199999)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_120pq")
+
+[node name="HitArea" type="Area2D" parent="Bee" unique_id=2107746598]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bee/HitArea" unique_id=32422295]
+position = Vector2(0, -2.3999999)
+shape = SubResource("CircleShape2D_50yv8")
+
+[node name="Bee2" type="CharacterBody2D" parent="." unique_id=581401266]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_ir1wi")
+
+[node name="BeeShape" type="CollisionShape2D" parent="Bee2" unique_id=1836748721]
+position = Vector2(-1.0600004, -3.380002)
+scale = Vector2(0.02, 0.02)
+shape = SubResource("CapsuleShape2D_4dot8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bee2" unique_id=1657829080]
+position = Vector2(0.9399998, 0.6199999)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_120pq")
+
+[node name="HitArea" type="Area2D" parent="Bee2" unique_id=833308058]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bee2/HitArea" unique_id=1759383768]
+position = Vector2(0, -2.3999999)
+shape = SubResource("CircleShape2D_50yv8")
+
+[node name="Bee3" type="CharacterBody2D" parent="." unique_id=569286406]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_ir1wi")
+
+[node name="BeeShape" type="CollisionShape2D" parent="Bee3" unique_id=232515431]
+position = Vector2(-1.0600004, -3.380002)
+scale = Vector2(0.02, 0.02)
+shape = SubResource("CapsuleShape2D_4dot8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bee3" unique_id=233447153]
+position = Vector2(0.9399998, 0.6199999)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_120pq")
+
+[node name="HitArea" type="Area2D" parent="Bee3" unique_id=1940789933]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bee3/HitArea" unique_id=105157271]
+position = Vector2(0, -2.3999999)
+shape = SubResource("CircleShape2D_50yv8")
+
+[node name="Hive" type="Sprite2D" parent="." unique_id=1146468705]
+position = Vector2(-26.399998, 2.3999996)
+scale = Vector2(0.14999999, 0.14999999)
+texture = ExtResource("3_gulqx")
