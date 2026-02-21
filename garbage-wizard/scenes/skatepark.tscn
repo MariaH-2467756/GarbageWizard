@@ -7,13 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://dnywyyt7emgl" path="res://scenes/wizard.tscn" id="5_1q8cr"]
 
 [node name="Skatepark" type="Node2D" unique_id=98383834]
+position = Vector2(-315, -146)
 script = ExtResource("1_ehus5")
 
 [node name="park" type="Sprite2D" parent="." unique_id=210915849]
-position = Vector2(6103.0005, 2545)
+position = Vector2(5861, 2399)
 scale = Vector2(5, 5)
 texture = ExtResource("1_j1v41")
-metadata/_edit_lock_ = true
 
 [node name="hek_noord2" type="Sprite2D" parent="park" unique_id=1748513070]
 position = Vector2(-1009.6, -552.80005)
@@ -512,3 +512,4 @@ texture = ExtResource("2_xea5g")
 
 [node name="SkaterMob" parent="." unique_id=416303636 instance=ExtResource("3_uaccq")]
 position = Vector2(409, 185)
+metadata/_edit_lock_ = true
