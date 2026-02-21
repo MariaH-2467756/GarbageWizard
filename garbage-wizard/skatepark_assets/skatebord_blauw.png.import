@@ -2,15 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-path="res://.godot/imported/PortalRoomFLoor.png-b3c989a4a0757506c802192f2ec94b1f.ctex"
+uid="uid://cbpmyj04lmg7l"
+path="res://.godot/imported/skatebord_blauw.png-ca7956a41f9381b818a4d4e3e1481d30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PortalRoomFLoor.png"
-dest_files=["res://.godot/imported/PortalRoomFLoor.png-b3c989a4a0757506c802192f2ec94b1f.ctex"]
+source_file="res://skatepark_assets/skatebord_blauw.png"
+dest_files=["res://.godot/imported/skatebord_blauw.png-ca7956a41f9381b818a4d4e3e1481d30.ctex"]
 
 [params]
 

@@ -2,15 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-path="res://.godot/imported/PortalRoomFLoor.png-b3c989a4a0757506c802192f2ec94b1f.ctex"
+uid="uid://c3loyy8qg70kt"
+path="res://.godot/imported/green_floor.png-2b1139a1460fa8fff8c83e72874b3835.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PortalRoomFLoor.png"
-dest_files=["res://.godot/imported/PortalRoomFLoor.png-b3c989a4a0757506c802192f2ec94b1f.ctex"]
+source_file="res://green_floor.png"
+dest_files=["res://.godot/imported/green_floor.png-2b1139a1460fa8fff8c83e72874b3835.ctex"]
 
 [params]
 

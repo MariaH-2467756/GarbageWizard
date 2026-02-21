@@ -2,15 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-path="res://.godot/imported/PortalRoomFLoor.png-b3c989a4a0757506c802192f2ec94b1f.ctex"
+uid="uid://bcl6io73q5mhv"
+path="res://.godot/imported/hek_skatepark.png-28415c07ee3c616126b7efd48bb517a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PortalRoomFLoor.png"
-dest_files=["res://.godot/imported/PortalRoomFLoor.png-b3c989a4a0757506c802192f2ec94b1f.ctex"]
+source_file="res://skatepark_assets/hek_skatepark.png"
+dest_files=["res://.godot/imported/hek_skatepark.png-28415c07ee3c616126b7efd48bb517a9.ctex"]
 
 [params]
 

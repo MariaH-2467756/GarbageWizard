@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dq1vvx8mtu6rp"]
+
+[ext_resource type="Script" uid="uid://cb11je61uiae7" path="res://title_screen.gd" id="1_ak2if"]
+[ext_resource type="FontFile" uid="uid://dbad0n42iah6j" path="res://fonts/Aurora.otf" id="1_v6p8y"]
+
+[node name="TitleScreen" type="CanvasLayer" unique_id=1964465023]
+script = ExtResource("1_ak2if")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1006912546]
+offset_right = 2000.0
+offset_bottom = 2000.0
+color = Color(0, 0.5647059, 0.22352941, 1)
+
+[node name="Title" type="Label" parent="." unique_id=640001124]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.5
+offset_top = -59.5
+offset_right = 300.5
+offset_bottom = 59.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_v6p8y")
+theme_override_font_sizes/font_size = 64
+text = "Garbage Wizard"
+
+[node name="Start" type="Button" parent="." unique_id=1646620108]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.5
+offset_top = 76.0
+offset_right = 88.5
+offset_bottom = 203.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_v6p8y")
+theme_override_font_sizes/font_size = 64
+text = "Start"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
