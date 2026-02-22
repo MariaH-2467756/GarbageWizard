@@ -4,512 +4,1201 @@
 [ext_resource type="Texture2D" uid="uid://6ppykkxo5q5j" path="res://skatepark_assets/skatepark.png" id="1_j1v41"]
 [ext_resource type="Texture2D" uid="uid://bcl6io73q5mhv" path="res://skatepark_assets/hek_skatepark.png" id="2_xea5g"]
 [ext_resource type="PackedScene" uid="uid://dbs2qmhnmpwke" path="res://scenes/skater_mob.tscn" id="3_uaccq"]
-[ext_resource type="PackedScene" uid="uid://dnywyyt7emgl" path="res://scenes/wizard.tscn" id="5_1q8cr"]
+[ext_resource type="PackedScene" uid="uid://ctwaexx270brx" path="res://scenes/half_pipe.tscn" id="5_ehus5"]
+[ext_resource type="PackedScene" uid="uid://beydxrw85qmmf" path="res://scenes/2_ramps.tscn" id="6_spa2m"]
+[ext_resource type="PackedScene" uid="uid://cowti2n8sb5ep" path="res://scenes/garbage.tscn" id="7_kcdnl"]
+[ext_resource type="Texture2D" uid="uid://ccvi4p3w4jswu" path="res://skatepark_assets/rail_transparent.png" id="8_8wnb5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pltqg"]
+size = Vector2(628.00024, 4444.96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehus5"]
+size = Vector2(7884.315, 221.79816)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dgpa"]
+size = Vector2(1232, 361)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feo5p"]
+size = Vector2(581.42346, 145.87708)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vf511"]
+size = Vector2(64, 3281.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbt7r"]
+size = Vector2(64, 3281.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2fu0"]
+size = Vector2(64, 3364.9312)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t70qt"]
+size = Vector2(1979.8943, 145.87708)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spa2m"]
+size = Vector2(212.375, 690)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kcdnl"]
+size = Vector2(153.1875, 602)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wnb5"]
+size = Vector2(227.59375, 643)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgcaw"]
+size = Vector2(153.1875, 887)
 
 [node name="Skatepark" type="Node2D" unique_id=98383834]
-position = Vector2(-315, -146)
 script = ExtResource("1_ehus5")
+metadata/_edit_lock_ = true
 
-[node name="park" type="Sprite2D" parent="." unique_id=210915849]
-position = Vector2(5861, 2399)
+[node name="Walls" type="Node" parent="." unique_id=428556648]
+
+[node name="park" type="Sprite2D" parent="Walls" unique_id=210915849]
+z_index = -1
+position = Vector2(5546, 2253)
 scale = Vector2(5, 5)
 texture = ExtResource("1_j1v41")
+metadata/_edit_lock_ = true
 
-[node name="hek_noord2" type="Sprite2D" parent="park" unique_id=1748513070]
+[node name="hek_noord2" type="Sprite2D" parent="Walls/park" unique_id=1748513070]
 position = Vector2(-1009.6, -552.80005)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord" type="Sprite2D" parent="park" unique_id=72428786]
+[node name="hek_noord" type="Sprite2D" parent="Walls/park" unique_id=72428786]
 position = Vector2(-1111.6, -555.00006)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_hoek_noordwest" type="Sprite2D" parent="park" unique_id=1163838713]
+[node name="hek_hoek_noordwest" type="Sprite2D" parent="Walls/park" unique_id=1163838713]
 position = Vector2(-1212.6, -545.2)
 rotation = -0.5235988
 scale = Vector2(0.25, 0.25)
 skew = 0.5235988
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west" type="Sprite2D" parent="park" unique_id=908776295]
+[node name="hek_west" type="Sprite2D" parent="Walls/park" unique_id=908776295]
 position = Vector2(-1263, -485.59964)
 rotation = -1.3386675
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west3" type="Sprite2D" parent="park" unique_id=376767913]
-position = Vector2(-1274.6, -254.6002)
-rotation = -1.5707964
-scale = Vector2(0.25, 0.25)
-skew = 1.2199851
-texture = ExtResource("2_xea5g")
-
-[node name="hek_west4" type="Sprite2D" parent="park" unique_id=1043425963]
-position = Vector2(-1276.0592, -156.65993)
-rotation = -1.5707964
-scale = Vector2(0.25, 0.25)
-skew = 1.2199851
-texture = ExtResource("2_xea5g")
-
-[node name="hek_zuid" type="Sprite2D" parent="park" unique_id=699928389]
+[node name="hek_zuid" type="Sprite2D" parent="Walls/park" unique_id=699928389]
 position = Vector2(-1126.6001, 258.60004)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid2" type="Sprite2D" parent="park" unique_id=1242956107]
+[node name="hek_zuid2" type="Sprite2D" parent="Walls/park" unique_id=1242956107]
 position = Vector2(-1023, 260.39993)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid3" type="Sprite2D" parent="park" unique_id=1750241423]
+[node name="hek_zuid3" type="Sprite2D" parent="Walls/park" unique_id=1750241423]
 position = Vector2(-918.8584, 262.31488)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid4" type="Sprite2D" parent="park" unique_id=179657390]
+[node name="hek_zuid4" type="Sprite2D" parent="Walls/park" unique_id=179657390]
 position = Vector2(-815.2583, 264.11478)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid5" type="Sprite2D" parent="park" unique_id=2010052669]
+[node name="hek_zuid5" type="Sprite2D" parent="Walls/park" unique_id=2010052669]
 position = Vector2(-711.05835, 267.3149)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid6" type="Sprite2D" parent="park" unique_id=1624674380]
+[node name="hek_zuid6" type="Sprite2D" parent="Walls/park" unique_id=1624674380]
 position = Vector2(-607.45825, 269.1148)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid7" type="Sprite2D" parent="park" unique_id=161244062]
+[node name="hek_zuid7" type="Sprite2D" parent="Walls/park" unique_id=161244062]
 position = Vector2(-504.45844, 270.31488)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid8" type="Sprite2D" parent="park" unique_id=2048008534]
+[node name="hek_zuid8" type="Sprite2D" parent="Walls/park" unique_id=2048008534]
 position = Vector2(-400.85834, 272.11478)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid9" type="Sprite2D" parent="park" unique_id=1141408702]
+[node name="hek_zuid9" type="Sprite2D" parent="Walls/park" unique_id=1141408702]
 position = Vector2(-296.6584, 275.3149)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid10" type="Sprite2D" parent="park" unique_id=1382211538]
+[node name="hek_zuid10" type="Sprite2D" parent="Walls/park" unique_id=1382211538]
 position = Vector2(-193.05829, 277.1148)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord3" type="Sprite2D" parent="park" unique_id=117380715]
+[node name="hek_noord3" type="Sprite2D" parent="Walls/park" unique_id=117380715]
 position = Vector2(-807.6, -551.2)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord4" type="Sprite2D" parent="park" unique_id=75255240]
+[node name="hek_noord4" type="Sprite2D" parent="Walls/park" unique_id=75255240]
 position = Vector2(-908.24994, -551.2)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord5" type="Sprite2D" parent="park" unique_id=1382425895]
+[node name="hek_noord5" type="Sprite2D" parent="Walls/park" unique_id=1382425895]
 position = Vector2(-608.2001, -550.2)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord6" type="Sprite2D" parent="park" unique_id=1376678515]
+[node name="hek_noord6" type="Sprite2D" parent="Walls/park" unique_id=1376678515]
 position = Vector2(-708.8501, -550.2)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord7" type="Sprite2D" parent="park" unique_id=1194487076]
+[node name="hek_noord7" type="Sprite2D" parent="Walls/park" unique_id=1194487076]
 position = Vector2(-416.6, -546.8)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord8" type="Sprite2D" parent="park" unique_id=1977413013]
+[node name="hek_noord8" type="Sprite2D" parent="Walls/park" unique_id=1977413013]
 position = Vector2(-516.6, -548)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord9" type="Sprite2D" parent="park" unique_id=5730170]
+[node name="hek_noord9" type="Sprite2D" parent="Walls/park" unique_id=5730170]
 position = Vector2(-217.00006, -545.80005)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord10" type="Sprite2D" parent="park" unique_id=271867964]
+[node name="hek_noord10" type="Sprite2D" parent="Walls/park" unique_id=271867964]
 position = Vector2(-317.65002, -545.80005)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_hoek_zuidoost" type="Sprite2D" parent="park" unique_id=1421925037]
+[node name="hek_hoek_zuidoost" type="Sprite2D" parent="Walls/park" unique_id=1421925037]
 position = Vector2(-114.58093, 229.98338)
 rotation = -0.9896017
 scale = Vector2(0.26020184, 0.19834946)
 skew = 0.7557276
 texture = ExtResource("2_xea5g")
 
-[node name="hek_hoek_noordoost" type="Sprite2D" parent="park" unique_id=900064132]
+[node name="hek_hoek_noordoost" type="Sprite2D" parent="Walls/park" unique_id=900064132]
 position = Vector2(-125.60005, -520.39996)
 rotation = 0.5235988
 scale = Vector2(0.25, 0.25)
 skew = -0.5235988
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost" type="Sprite2D" parent="park" unique_id=345352273]
+[node name="hek_oost" type="Sprite2D" parent="Walls/park" unique_id=345352273]
 position = Vector2(-96.19996, -484.20004)
 rotation = 1.2095132
 scale = Vector2(0.25, 0.25)
 skew = -1.0594149
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost2" type="Sprite2D" parent="park" unique_id=1203418248]
+[node name="hek_oost2" type="Sprite2D" parent="Walls/park" unique_id=1203418248]
 position = Vector2(-61.40002, -350.59998)
 rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 skew = -1.2042772
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost3" type="Sprite2D" parent="park" unique_id=218084054]
+[node name="hek_oost3" type="Sprite2D" parent="Walls/park" unique_id=218084054]
 position = Vector2(-60.800022, -248.19998)
 rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 skew = -1.2042772
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost4" type="Sprite2D" parent="park" unique_id=437861332]
+[node name="hek_oost4" type="Sprite2D" parent="Walls/park" unique_id=437861332]
 position = Vector2(-82.400024, 146.99998)
 rotation = -1.4538592
 scale = Vector2(0.25, 0.25)
 skew = 1.2077678
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost5" type="Sprite2D" parent="park" unique_id=35697988]
+[node name="hek_oost5" type="Sprite2D" parent="Walls/park" unique_id=35697988]
 position = Vector2(-76.88328, 46.049496)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.4084808
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost6" type="Sprite2D" parent="park" unique_id=1629157997]
+[node name="hek_oost6" type="Sprite2D" parent="Walls/park" unique_id=1629157997]
 position = Vector2(-63.000027, -146.40007)
 rotation = 1.6877334
 scale = Vector2(0.25, 0.25)
 skew = -1.2042772
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost7" type="Sprite2D" parent="park" unique_id=1985043249]
+[node name="hek_oost7" type="Sprite2D" parent="Walls/park" unique_id=1985043249]
 position = Vector2(-71.200035, -47.200027)
 rotation = 1.5393804
 scale = Vector2(0.25, 0.25)
 skew = -1.2042772
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord11" type="Sprite2D" parent="park" unique_id=1485388240]
+[node name="hek_noord11" type="Sprite2D" parent="Walls/park" unique_id=1485388240]
 position = Vector2(-1060.2, -553.2001)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord12" type="Sprite2D" parent="park" unique_id=1610372555]
+[node name="hek_noord12" type="Sprite2D" parent="Walls/park" unique_id=1610372555]
 position = Vector2(-1163.4875, -556.00006)
 scale = Vector2(0.256754, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord13" type="Sprite2D" parent="park" unique_id=1361922430]
+[node name="hek_noord13" type="Sprite2D" parent="Walls/park" unique_id=1361922430]
 position = Vector2(-858.39996, -551.00006)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord14" type="Sprite2D" parent="park" unique_id=1815742774]
+[node name="hek_noord14" type="Sprite2D" parent="Walls/park" unique_id=1815742774]
 position = Vector2(-959.4, -552.80005)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord15" type="Sprite2D" parent="park" unique_id=1442006818]
+[node name="hek_noord15" type="Sprite2D" parent="Walls/park" unique_id=1442006818]
 position = Vector2(-658.8, -550.00006)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord16" type="Sprite2D" parent="park" unique_id=416015086]
+[node name="hek_noord16" type="Sprite2D" parent="Walls/park" unique_id=416015086]
 position = Vector2(-760.2751, -551.50006)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord17" type="Sprite2D" parent="park" unique_id=290176277]
+[node name="hek_noord17" type="Sprite2D" parent="Walls/park" unique_id=290176277]
 position = Vector2(-466.19998, -547.00006)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord18" type="Sprite2D" parent="park" unique_id=405688826]
+[node name="hek_noord18" type="Sprite2D" parent="Walls/park" unique_id=405688826]
 position = Vector2(-567.2, -548.4)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord19" type="Sprite2D" parent="park" unique_id=1077481061]
+[node name="hek_noord19" type="Sprite2D" parent="Walls/park" unique_id=1077481061]
 position = Vector2(-268.40005, -545.60004)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord20" type="Sprite2D" parent="park" unique_id=1914592105]
+[node name="hek_noord20" type="Sprite2D" parent="Walls/park" unique_id=1914592105]
 position = Vector2(-368.2, -546.00006)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="hek_hoek_noordwest2" type="Sprite2D" parent="park" unique_id=3548672]
+[node name="hek_hoek_noordwest2" type="Sprite2D" parent="Walls/park" unique_id=3548672]
 position = Vector2(-1244.326, -521.7665)
 rotation = -0.7557276
 scale = Vector2(0.17844203, 0.25381473)
 skew = 0.5235988
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west8" type="Sprite2D" parent="park" unique_id=150452821]
+[node name="hek_west8" type="Sprite2D" parent="Walls/park" unique_id=150452821]
 position = Vector2(-1266.8, -436.99994)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west9" type="Sprite2D" parent="park" unique_id=900208186]
+[node name="hek_west9" type="Sprite2D" parent="Walls/park" unique_id=900208186]
 position = Vector2(-1266.4, -386.59995)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west10" type="Sprite2D" parent="park" unique_id=1393614660]
+[node name="hek_west10" type="Sprite2D" parent="Walls/park" unique_id=1393614660]
 position = Vector2(-1265.8, -339.79996)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west11" type="Sprite2D" parent="park" unique_id=329767915]
+[node name="hek_west11" type="Sprite2D" parent="Walls/park" unique_id=329767915]
 position = Vector2(-1266, -289.19995)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west12" type="Sprite2D" parent="park" unique_id=681154858]
+[node name="hek_west12" type="Sprite2D" parent="Walls/park" unique_id=681154858]
 position = Vector2(-1266.4, -240.8)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west13" type="Sprite2D" parent="park" unique_id=769805224]
+[node name="hek_west13" type="Sprite2D" parent="Walls/park" unique_id=769805224]
 position = Vector2(-1265.8002, -191.20015)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west14" type="Sprite2D" parent="park" unique_id=710980112]
+[node name="hek_west14" type="Sprite2D" parent="Walls/park" unique_id=710980112]
 position = Vector2(-1266.0001, -142.80002)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west15" type="Sprite2D" parent="park" unique_id=1702539350]
+[node name="hek_west15" type="Sprite2D" parent="Walls/park" unique_id=1702539350]
 position = Vector2(-1266, -94.000206)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west16" type="Sprite2D" parent="park" unique_id=1849087505]
+[node name="hek_west16" type="Sprite2D" parent="Walls/park" unique_id=1849087505]
 position = Vector2(-1265.6001, -43.80021)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west17" type="Sprite2D" parent="park" unique_id=728381067]
+[node name="hek_west17" type="Sprite2D" parent="Walls/park" unique_id=728381067]
 position = Vector2(-1265.4, 6.399929)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west18" type="Sprite2D" parent="park" unique_id=109164001]
+[node name="hek_west18" type="Sprite2D" parent="Walls/park" unique_id=109164001]
 position = Vector2(-1265.4, 53.599926)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west19" type="Sprite2D" parent="park" unique_id=795225710]
+[node name="hek_west19" type="Sprite2D" parent="Walls/park" unique_id=795225710]
 position = Vector2(-1265.8, 100.399925)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_west20" type="Sprite2D" parent="park" unique_id=595567068]
+[node name="hek_west20" type="Sprite2D" parent="Walls/park" unique_id=595567068]
 position = Vector2(-1265.8, 148.19992)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.2199851
 texture = ExtResource("2_xea5g")
 
-[node name="hek_hoek_zuidwest2" type="Sprite2D" parent="park" unique_id=1035266997]
+[node name="hek_hoek_zuidwest2" type="Sprite2D" parent="Walls/park" unique_id=1035266997]
 position = Vector2(-1250.6024, 201.06697)
 rotation = 0.9896017
 scale = Vector2(0.25, 0.33720165)
 skew = -1.3072516
 texture = ExtResource("2_xea5g")
 
-[node name="hek_hoek_zuidwest" type="Sprite2D" parent="park" unique_id=652525917]
+[node name="hek_hoek_zuidwest" type="Sprite2D" parent="Walls/park" unique_id=652525917]
 position = Vector2(-1216.344, 236.71304)
 rotation = 0.5235988
 scale = Vector2(0.24999999, 0.3327211)
 skew = -0.75572765
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid11" type="Sprite2D" parent="park" unique_id=264175598]
+[node name="hek_zuid11" type="Sprite2D" parent="Walls/park" unique_id=264175598]
 position = Vector2(-1171.7722, 253.56607)
 rotation = 0.116937056
 scale = Vector2(0.251857, 0.3070947)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid12" type="Sprite2D" parent="park" unique_id=668072356]
+[node name="hek_zuid12" type="Sprite2D" parent="Walls/park" unique_id=668072356]
+z_index = 2
 position = Vector2(-1075.629, 259.0573)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid13" type="Sprite2D" parent="park" unique_id=697846241]
+[node name="hek_zuid13" type="Sprite2D" parent="Walls/park" unique_id=697846241]
 position = Vector2(-971.4875, 260.97226)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid14" type="Sprite2D" parent="park" unique_id=145952579]
+[node name="hek_zuid14" type="Sprite2D" parent="Walls/park" unique_id=145952579]
 position = Vector2(-867.8874, 262.77216)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid15" type="Sprite2D" parent="park" unique_id=519537662]
+[node name="hek_zuid15" type="Sprite2D" parent="Walls/park" unique_id=519537662]
 position = Vector2(-763.68744, 265.9723)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid16" type="Sprite2D" parent="park" unique_id=1949721559]
+[node name="hek_zuid16" type="Sprite2D" parent="Walls/park" unique_id=1949721559]
 position = Vector2(-660.08734, 267.7722)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid17" type="Sprite2D" parent="park" unique_id=384794751]
+[node name="hek_zuid17" type="Sprite2D" parent="Walls/park" unique_id=384794751]
 position = Vector2(-557.0875, 268.97226)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid18" type="Sprite2D" parent="park" unique_id=1227333839]
+[node name="hek_zuid18" type="Sprite2D" parent="Walls/park" unique_id=1227333839]
 position = Vector2(-453.48743, 270.77216)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid19" type="Sprite2D" parent="park" unique_id=651385900]
+[node name="hek_zuid19" type="Sprite2D" parent="Walls/park" unique_id=651385900]
 position = Vector2(-349.28748, 273.9723)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_zuid20" type="Sprite2D" parent="park" unique_id=784432983]
+[node name="hek_zuid20" type="Sprite2D" parent="Walls/park" unique_id=784432983]
 position = Vector2(-245.68736, 275.7722)
 scale = Vector2(0.25, 0.25)
 skew = -0.23212878
 texture = ExtResource("2_xea5g")
 
-[node name="hek_hoek_zuidoost2" type="Sprite2D" parent="park" unique_id=1105096122]
+[node name="hek_hoek_zuidoost2" type="Sprite2D" parent="Walls/park" unique_id=1105096122]
 position = Vector2(-148.7809, 263.70947)
 rotation = -0.64053583
 scale = Vector2(0.26391694, 0.2686478)
 skew = 0.7557276
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost8" type="Sprite2D" parent="park" unique_id=2082488557]
+[node name="hek_oost8" type="Sprite2D" parent="Walls/park" unique_id=2082488557]
 position = Vector2(-82.20004, -438.4001)
 rotation = 1.3264502
 scale = Vector2(0.23218815, 0.21857059)
 skew = -1.2042772
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost9" type="Sprite2D" parent="park" unique_id=1496699090]
+[node name="hek_oost9" type="Sprite2D" parent="Walls/park" unique_id=1496699090]
 position = Vector2(-60.503147, -301.23148)
 rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 skew = -1.2042772
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost10" type="Sprite2D" parent="park" unique_id=882875783]
+[node name="hek_oost10" type="Sprite2D" parent="Walls/park" unique_id=882875783]
 position = Vector2(-59.90315, -198.83147)
 rotation = 1.5707964
 scale = Vector2(0.25, 0.25)
 skew = -1.2042772
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost11" type="Sprite2D" parent="park" unique_id=1897595791]
+[node name="hek_oost11" type="Sprite2D" parent="Walls/park" unique_id=1897595791]
 position = Vector2(-81.50315, 196.3685)
 rotation = -1.4538592
 scale = Vector2(0.25, 0.25)
 skew = 1.2077678
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost12" type="Sprite2D" parent="park" unique_id=460491962]
+[node name="hek_oost12" type="Sprite2D" parent="Walls/park" unique_id=460491962]
 position = Vector2(-75.986404, 95.418)
 rotation = -1.5707964
 scale = Vector2(0.25, 0.25)
 skew = 1.4084808
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost13" type="Sprite2D" parent="park" unique_id=158377669]
+[node name="hek_oost13" type="Sprite2D" parent="Walls/park" unique_id=158377669]
 position = Vector2(-69.10315, -96.03151)
 rotation = 1.6877334
 scale = Vector2(0.25, 0.25)
 skew = -1.2042772
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost14" type="Sprite2D" parent="park" unique_id=565124353]
+[node name="hek_oost14" type="Sprite2D" parent="Walls/park" unique_id=565124353]
 position = Vector2(-72.837814, 1.8905311)
 rotation = 1.5393804
 scale = Vector2(0.15497491, 0.37671822)
 skew = -1.2042772
 texture = ExtResource("2_xea5g")
 
-[node name="hek_oost15" type="Sprite2D" parent="park" unique_id=180112608]
+[node name="hek_oost15" type="Sprite2D" parent="Walls/park" unique_id=180112608]
 position = Vector2(-69.000015, -395.60004)
 rotation = 1.3386675
 scale = Vector2(0.25, 0.25)
 skew = -1.0594149
 texture = ExtResource("2_xea5g")
 
-[node name="hek_noord21" type="Sprite2D" parent="park" unique_id=2068145072]
+[node name="hek_noord21" type="Sprite2D" parent="Walls/park" unique_id=2068145072]
 position = Vector2(-170.59996, -538.80005)
 rotation = 0.23212878
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_xea5g")
 
-[node name="Wizard" parent="." unique_id=1373688230 instance=ExtResource("5_1q8cr")]
+[node name="wall" type="StaticBody2D" parent="Walls" unique_id=685655195]
+position = Vector2(-846, 88)
+rotation = 0.39269912
 
-[node name="SkaterMob" parent="." unique_id=416303636 instance=ExtResource("3_uaccq")]
-position = Vector2(409, 185)
-metadata/_edit_lock_ = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall" unique_id=1513538930]
+position = Vector2(383.04486, 1486.5737)
+rotation = -0.39269912
+shape = SubResource("RectangleShape2D_pltqg")
+
+[node name="wall2" type="StaticBody2D" parent="Walls" unique_id=1406030470]
+position = Vector2(-175, -355.00003)
+rotation = 0.39269912
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall2" unique_id=566329178]
+position = Vector2(1554.8488, -845.36444)
+rotation = -0.38397244
+shape = SubResource("RectangleShape2D_ehus5")
+
+[node name="wall3" type="StaticBody2D" parent="Walls" unique_id=1441297700]
+position = Vector2(-846, 88)
+rotation = 0.39269912
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall3" unique_id=2064869421]
+position = Vector2(5399.1143, -2696.4033)
+rotation = -1.1693707
+shape = SubResource("RectangleShape2D_pltqg")
+
+[node name="wall4" type="StaticBody2D" parent="Walls" unique_id=971042860]
+position = Vector2(-1426.1279, 100.982895)
+rotation = 0.78539824
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall4" unique_id=997380698]
+position = Vector2(3171.476, 1929.6156)
+rotation = -1.7505653
+shape = SubResource("RectangleShape2D_pltqg")
+
+[node name="wall5" type="StaticBody2D" parent="Walls" unique_id=445764781]
+position = Vector2(6246, 1207.9999)
+rotation = 0.39269912
+scale = Vector2(5, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall5" unique_id=388399820]
+position = Vector2(-2021.7411, 1432.3145)
+rotation = -0.3839724
+shape = SubResource("RectangleShape2D_ehus5")
+
+[node name="wall6" type="StaticBody2D" parent="Walls" unique_id=505927520]
+position = Vector2(-1426.1279, 100.982895)
+rotation = 0.78539824
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall6" unique_id=747910002]
+position = Vector2(7084.6055, -1881.6897)
+rotation = -3.1468287
+shape = SubResource("RectangleShape2D_pltqg")
+
+[node name="wall7" type="StaticBody2D" parent="Walls" unique_id=1472736783]
+position = Vector2(-1426.1279, 100.982895)
+rotation = 0.78539824
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall7" unique_id=1981715156]
+position = Vector2(-12.625488, -748.1976)
+rotation = -3.1468287
+shape = SubResource("RectangleShape2D_pltqg")
+
+[node name="wall9" type="StaticBody2D" parent="Walls" unique_id=631321593]
+position = Vector2(-846, 88)
+rotation = 0.39269912
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall9" unique_id=476882941]
+position = Vector2(6379.3306, -849.96405)
+rotation = -0.39269912
+shape = SubResource("RectangleShape2D_pltqg")
+
+[node name="HalfPipe" parent="." unique_id=554974797 instance=ExtResource("5_ehus5")]
+z_index = 1
+position = Vector2(1172, 866)
+skew = -0.123918414
+
+[node name="HalfPipe2" parent="." unique_id=8794521 instance=ExtResource("5_ehus5")]
+z_index = 1
+position = Vector2(1068, 1836)
+skew = -0.123918414
+
+[node name="hek_parcour" type="Sprite2D" parent="." unique_id=873667972]
+z_index = 1
+position = Vector2(148.28674, 2299.0002)
+rotation = -1.0733775
+scale = Vector2(1.5850556, 2.5277004)
+skew = 0.9110619
+texture = ExtResource("2_xea5g")
+
+[node name="hek_hoek_zuidwest" type="Sprite2D" parent="." unique_id=96954181]
+z_index = 1
+position = Vector2(114.95627, 2533.9666)
+rotation = 0.89709926
+scale = Vector2(0.5876709, 1.6943599)
+skew = -1.097812
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west19" type="Sprite2D" parent="." unique_id=813105829]
+z_index = 1
+position = Vector2(114.00001, 3040)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west20" type="Sprite2D" parent="." unique_id=1837866610]
+z_index = 1
+position = Vector2(111, 3241)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="Mobs" type="Node" parent="." unique_id=1997445857]
+
+[node name="SkaterMob8" parent="Mobs" unique_id=416303636 instance=ExtResource("3_uaccq")]
+z_index = 2
+position = Vector2(887, 1664)
+speed = 350
+direction = 0.5
+bound = 400
+
+[node name="SkaterMob9" parent="Mobs" unique_id=1388510032 instance=ExtResource("3_uaccq")]
+z_index = 2
+position = Vector2(788, 1822)
+speed = 400
+direction = 0.5
+bound = 300
+
+[node name="SkaterMob" parent="Mobs" unique_id=994470444 instance=ExtResource("3_uaccq")]
+z_index = 2
+position = Vector2(1024, 546)
+speed = 300
+direction = 0.5
+bound = 400
+
+[node name="SkaterMob2" parent="Mobs" unique_id=1785713980 instance=ExtResource("3_uaccq")]
+z_index = 2
+position = Vector2(926, 693)
+speed = 150
+direction = 0.5
+bound = 400
+
+[node name="SkaterMob3" parent="Mobs" unique_id=1937361220 instance=ExtResource("3_uaccq")]
+z_index = 2
+position = Vector2(910, 870)
+speed = 200
+direction = 0.5
+bound = 300
+
+[node name="SkaterMob5" parent="Mobs" unique_id=2106994659 instance=ExtResource("3_uaccq")]
+z_index = 2
+position = Vector2(999, 1514)
+speed = 500
+direction = 0.5
+bound = 400
+
+[node name="SkaterMob6" parent="Mobs" unique_id=1149410473 instance=ExtResource("3_uaccq")]
+z_index = 2
+position = Vector2(976, 2619)
+speed = 600
+direction = -0.5
+bound = 400
+
+[node name="SkaterMob7" parent="Mobs" unique_id=701546500 instance=ExtResource("3_uaccq")]
+z_index = 2
+position = Vector2(906, 2788)
+speed = 600
+direction = 0.5
+bound = 400
+
+[node name="SkaterMob10" parent="Mobs" unique_id=1681306193 instance=ExtResource("3_uaccq")]
+z_index = 2
+position = Vector2(3496, 3060)
+speed = 1200
+direction = 0.5
+bound = 1000
+
+[node name="SkaterMob11" parent="Mobs" unique_id=240229129 instance=ExtResource("3_uaccq")]
+z_index = 2
+position = Vector2(3509, 3271)
+speed = 1200
+direction = -0.5
+bound = 1000
+
+[node name="2Ramps" parent="." unique_id=1940152645 instance=ExtResource("6_spa2m")]
+position = Vector2(906, 2657)
+
+[node name="hek_west21" type="Sprite2D" parent="." unique_id=970088843]
+z_index = 1
+position = Vector2(111, 3444)
+rotation = -1.5707964
+scale = Vector2(1.008911, 1)
+skew = 1.2496557
+texture = ExtResource("2_xea5g")
+
+[node name="hek_oost2" type="Sprite2D" parent="." unique_id=684083092]
+position = Vector2(1863.9999, -359.0002)
+rotation = 1.5707964
+skew = -1.2042772
+texture = ExtResource("2_xea5g")
+
+[node name="hek_oost3" type="Sprite2D" parent="." unique_id=1735873596]
+position = Vector2(1859.9999, 60.000122)
+rotation = 1.5707964
+skew = -1.2042772
+texture = ExtResource("2_xea5g")
+
+[node name="hek_oost9" type="Sprite2D" parent="." unique_id=1547954059]
+position = Vector2(1861.9999, -148.00012)
+rotation = 1.5707964
+skew = -1.2042772
+texture = ExtResource("2_xea5g")
+
+[node name="hek_oost10" type="Sprite2D" parent="." unique_id=1962212998]
+position = Vector2(1858, 239.26953)
+rotation = 1.5707964
+scale = Vector2(0.7181923, 1)
+skew = -1.2042772
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid12" type="Sprite2D" parent="." unique_id=1628097261]
+position = Vector2(-666.3167, 188.2298)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid13" type="Sprite2D" parent="." unique_id=1667888960]
+position = Vector2(-462.31668, 191.2298)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid14" type="Sprite2D" parent="." unique_id=718995020]
+position = Vector2(-257.3167, 198.2298)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid15" type="Sprite2D" parent="." unique_id=1731601392]
+position = Vector2(-50.31671, 203.2298)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid16" type="Sprite2D" parent="." unique_id=1229403908]
+position = Vector2(344.83832, 241.80334)
+rotation = 0.4660029
+scale = Vector2(0.9967612, 1.0409513)
+skew = -0.6387905
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid17" type="Sprite2D" parent="." unique_id=613255652]
+position = Vector2(155.78732, 199.8851)
+scale = Vector2(1.0319191, 1.0760564)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="Garbage" parent="." unique_id=445665388 instance=ExtResource("7_kcdnl")]
+position = Vector2(1009, 3259)
+
+[node name="hek_zuid18" type="Sprite2D" parent="." unique_id=1382891510]
+position = Vector2(2007.6833, 2896.23)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid19" type="Sprite2D" parent="." unique_id=369556377]
+position = Vector2(2211.6833, 2899.23)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid21" type="Sprite2D" parent="." unique_id=1615443180]
+z_index = 1
+position = Vector2(3227, 2906)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid23" type="Sprite2D" parent="." unique_id=744065387]
+position = Vector2(3433.7874, 2905.115)
+scale = Vector2(1.0319191, 1.0760564)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west10" type="Sprite2D" parent="." unique_id=544931053]
+position = Vector2(2317.9998, 2599.9998)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west13" type="Sprite2D" parent="." unique_id=2033392360]
+position = Vector2(2314.9998, 2797.9998)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west14" type="Sprite2D" parent="." unique_id=1413360640]
+position = Vector2(2323.6816, 2204.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west15" type="Sprite2D" parent="." unique_id=7312651]
+position = Vector2(2320.6816, 2402.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west16" type="Sprite2D" parent="." unique_id=87520442]
+position = Vector2(2328.6816, 1809.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west17" type="Sprite2D" parent="." unique_id=995652389]
+position = Vector2(2325.6816, 2007.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west18" type="Sprite2D" parent="." unique_id=1195134275]
+position = Vector2(2334.6816, 1416.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west22" type="Sprite2D" parent="." unique_id=641295833]
+position = Vector2(2331.6816, 1614.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west23" type="Sprite2D" parent="." unique_id=998200885]
+position = Vector2(2340.6816, 1019.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west24" type="Sprite2D" parent="." unique_id=2081708680]
+position = Vector2(2337.6816, 1217.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west25" type="Sprite2D" parent="." unique_id=905601884]
+position = Vector2(2346.6816, 619.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west26" type="Sprite2D" parent="." unique_id=1981288778]
+position = Vector2(2343.6816, 817.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west27" type="Sprite2D" parent="." unique_id=656472840]
+position = Vector2(2352.6816, 222.48022)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west28" type="Sprite2D" parent="." unique_id=898400441]
+position = Vector2(2349.6816, 420.48022)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west11" type="Sprite2D" parent="." unique_id=207448438]
+position = Vector2(3098.6816, 2603.9998)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west29" type="Sprite2D" parent="." unique_id=1078230803]
+position = Vector2(3095.6816, 2801.9998)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west30" type="Sprite2D" parent="." unique_id=368060436]
+position = Vector2(3104.3635, 2208.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west31" type="Sprite2D" parent="." unique_id=1333107767]
+position = Vector2(3101.3635, 2406.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west32" type="Sprite2D" parent="." unique_id=33039695]
+position = Vector2(3109.3635, 1813.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west33" type="Sprite2D" parent="." unique_id=1853229447]
+position = Vector2(3106.3635, 2011.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west34" type="Sprite2D" parent="." unique_id=1151363104]
+position = Vector2(3115.3635, 1420.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west35" type="Sprite2D" parent="." unique_id=572931472]
+position = Vector2(3112.3635, 1618.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west36" type="Sprite2D" parent="." unique_id=165183045]
+position = Vector2(3121.3635, 1023.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west37" type="Sprite2D" parent="." unique_id=1166435600]
+position = Vector2(3118.3635, 1221.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west38" type="Sprite2D" parent="." unique_id=1681722621]
+position = Vector2(3127.3635, 623.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west39" type="Sprite2D" parent="." unique_id=1376808267]
+position = Vector2(3124.3635, 821.4802)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west40" type="Sprite2D" parent="." unique_id=621750903]
+position = Vector2(3133.3635, 226.48022)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west41" type="Sprite2D" parent="." unique_id=1102793787]
+position = Vector2(3130.3635, 424.48022)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west42" type="Sprite2D" parent="." unique_id=1568281586]
+position = Vector2(2359.6816, -162.01978)
+rotation = -1.5707964
+scale = Vector2(0.8815166, 1)
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west43" type="Sprite2D" parent="." unique_id=969482225]
+position = Vector2(2356.6816, 23.480225)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west44" type="Sprite2D" parent="." unique_id=238194967]
+position = Vector2(2362, -319.00073)
+rotation = -1.5707964
+scale = Vector2(0.82464504, 1)
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid22" type="Sprite2D" parent="." unique_id=1481562036]
+z_index = 1
+position = Vector2(3647.6833, 2913)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid24" type="Sprite2D" parent="." unique_id=2016951100]
+position = Vector2(3854.4707, 2912.115)
+scale = Vector2(1.0319191, 1.0760564)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid25" type="Sprite2D" parent="." unique_id=913710318]
+z_index = 1
+position = Vector2(4063.6833, 2913)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid26" type="Sprite2D" parent="." unique_id=21669627]
+position = Vector2(4270.4707, 2912.115)
+scale = Vector2(1.0319191, 1.0760564)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid27" type="Sprite2D" parent="." unique_id=970702856]
+z_index = 1
+position = Vector2(4477.683, 2914)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid28" type="Sprite2D" parent="." unique_id=1733187526]
+position = Vector2(4684.47, 2913.115)
+scale = Vector2(1.0319191, 1.0760564)
+skew = -0.23212878
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid29" type="Sprite2D" parent="." unique_id=1153910321]
+position = Vector2(4875.583, 2916.9998)
+scale = Vector2(0.8099634, 1.0760564)
+skew = -0.11519173
+texture = ExtResource("2_xea5g")
+
+[node name="hek_zuid30" type="Sprite2D" parent="." unique_id=1530739920]
+position = Vector2(5032.401, 2922)
+scale = Vector2(0.70397115, 1.0760564)
+skew = -0.057595864
+texture = ExtResource("2_xea5g")
+
+[node name="Garbage2" parent="." unique_id=840232053 instance=ExtResource("7_kcdnl")]
+position = Vector2(4879, 3258.5)
+
+[node name="obstacles" type="StaticBody2D" parent="." unique_id=1777441404]
+position = Vector2(-846, 88)
+rotation = 0.39269912
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="obstacles" unique_id=936925866]
+position = Vector2(707.36633, -45.674133)
+rotation = -0.39269912
+shape = SubResource("RectangleShape2D_3dgpa")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="obstacles" unique_id=273278612]
+z_index = 2
+position = Vector2(3747.6758, 1482.6898)
+rotation = -0.39269912
+scale = Vector2(1, 0.99999994)
+skew = 0.017453194
+shape = SubResource("RectangleShape2D_feo5p")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="obstacles" unique_id=2125975550]
+position = Vector2(3341.8218, -168.70157)
+rotation = -0.39269912
+shape = SubResource("RectangleShape2D_vf511")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="obstacles" unique_id=1657593013]
+z_index = 1
+position = Vector2(3347.9336, -185.30423)
+rotation = -0.39269912
+skew = 0.029670477
+shape = SubResource("RectangleShape2D_xbt7r")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="obstacles" unique_id=650131737]
+position = Vector2(4103.6953, -474.3121)
+rotation = -0.39269912
+skew = 0.017453313
+shape = SubResource("RectangleShape2D_i2fu0")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="obstacles" unique_id=18430189]
+z_index = 2
+position = Vector2(5646.686, 714.41565)
+rotation = -0.39269912
+scale = Vector2(1, 0.99999994)
+skew = 0.017453194
+shape = SubResource("RectangleShape2D_t70qt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstacles" unique_id=1404384040]
+position = Vector2(1511.4673, 440.08603)
+rotation = -0.39269912
+shape = SubResource("RectangleShape2D_spa2m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="obstacles" unique_id=2024182928]
+position = Vector2(2971.6523, 343.98184)
+rotation = -0.39269912
+shape = SubResource("RectangleShape2D_spa2m")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="obstacles" unique_id=2133788768]
+position = Vector2(3199.026, 1020.46387)
+rotation = -0.39269912
+shape = SubResource("RectangleShape2D_spa2m")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="obstacles" unique_id=1710605249]
+position = Vector2(1911.3462, 1601.4636)
+rotation = -0.39269912
+shape = SubResource("RectangleShape2D_kcdnl")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="obstacles" unique_id=1587174962]
+z_index = 1
+position = Vector2(1817.164, 1690.8065)
+rotation = -0.39269912
+shape = SubResource("RectangleShape2D_8wnb5")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="obstacles" unique_id=1065302638]
+position = Vector2(2502.6187, -1157.3055)
+rotation = -0.39269912
+shape = SubResource("RectangleShape2D_tgcaw")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="obstacles" unique_id=450948442]
+z_index = 1
+position = Vector2(2037.4199, 2559.114)
+rotation = -0.39269912
+shape = SubResource("RectangleShape2D_8wnb5")
+
+[node name="hek_west45" type="Sprite2D" parent="." unique_id=37642534]
+position = Vector2(3140.6816, -165.51978)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west46" type="Sprite2D" parent="." unique_id=1667595153]
+position = Vector2(3137.6816, 32.480225)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west47" type="Sprite2D" parent="." unique_id=1322773161]
+position = Vector2(3146.6816, -349.51978)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="hek_west48" type="Sprite2D" parent="." unique_id=1521776670]
+position = Vector2(3143.6816, -151.51978)
+rotation = -1.5707964
+skew = 1.2199851
+texture = ExtResource("2_xea5g")
+
+[node name="Rail" type="Sprite2D" parent="." unique_id=1689227459]
+position = Vector2(3469, 3205.5)
+texture = ExtResource("8_8wnb5")
+
+[node name="Rail2" type="Sprite2D" parent="." unique_id=36038002]
+position = Vector2(3472, 3419.5)
+texture = ExtResource("8_8wnb5")
+
+[node name="Rail3" type="Sprite2D" parent="." unique_id=1034540175]
+position = Vector2(2988, 3419.5)
+texture = ExtResource("8_8wnb5")
+
+[node name="Rail4" type="Sprite2D" parent="." unique_id=226369501]
+position = Vector2(3955, 3419.5)
+texture = ExtResource("8_8wnb5")
+
+[node name="Rail5" type="Sprite2D" parent="." unique_id=458145538]
+position = Vector2(3954, 3205.5)
+texture = ExtResource("8_8wnb5")
+
+[node name="Rail6" type="Sprite2D" parent="." unique_id=2044103667]
+position = Vector2(2989, 3205.5)
+texture = ExtResource("8_8wnb5")
+
+[node name="Rail7" type="Sprite2D" parent="." unique_id=1617155835]
+position = Vector2(2506, 3205.5)
+texture = ExtResource("8_8wnb5")
+
+[node name="Rail8" type="Sprite2D" parent="." unique_id=22204676]
+position = Vector2(2513, 3419.5)
+texture = ExtResource("8_8wnb5")
+
+[node name="Rail9" type="Sprite2D" parent="." unique_id=1096439405]
+position = Vector2(4433, 3205.5)
+texture = ExtResource("8_8wnb5")
+
+[node name="Rail10" type="Sprite2D" parent="." unique_id=1344543867]
+position = Vector2(4437, 3419.5)
+texture = ExtResource("8_8wnb5")
+
+[node name="Garbage3" parent="." unique_id=781700563 instance=ExtResource("7_kcdnl")]
+position = Vector2(2772, -205)

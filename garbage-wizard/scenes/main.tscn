@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dojq78od07ryv" path="res://scenes/skatepark.tscn" id="6_85g3d"]
 [ext_resource type="PackedScene" uid="uid://dq1vvx8mtu6rp" path="res://scenes/title_screen.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://cljqnurqsd5ui" path="res://scenes/game_over_screen.tscn" id="8_85g3d"]
-[ext_resource type="Script" uid="uid://bdgmsvl1hcvxj" path="res://start_position.gd" id="9_85g3d"]
+[ext_resource type="Script" path="res://scenes/start_position.gd" id="9_85g3d"]
 
 [node name="Main" type="Node2D" unique_id=2020212354]
 script = ExtResource("1_tefeu")

@@ -8,6 +8,7 @@ radius = 22.0
 height = 84.0
 
 [node name="Wizard" type="CharacterBody2D" unique_id=1782572100]
+z_index = 2
 script = ExtResource("1_xxhrx")
 metadata/_edit_lock_ = true
 

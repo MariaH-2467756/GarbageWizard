@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://ctwaexx270brx"]
+
+[ext_resource type="Texture2D" uid="uid://dsxmhnvph764l" path="res://skatepark_assets/half-pipe.png" id="1_mac1l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wetbp"]
+size = Vector2(94.75, 184)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mac1l"]
+size = Vector2(174.06967, 159.0166)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52yhg"]
+size = Vector2(72.188034, 120.1304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkpcj"]
+size = Vector2(94.75, 184)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fblg"]
+size = Vector2(111.627174, 152.61462)
+
+[node name="Node2D" type="StaticBody2D" unique_id=1940152645]
+
+[node name="HalfPipe" type="Sprite2D" parent="." unique_id=554974797]
+scale = Vector2(2, 3)
+texture = ExtResource("1_mac1l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1224390483]
+position = Vector2(551, 123)
+scale = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_wetbp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1905931923]
+position = Vector2(676, -20.9999)
+rotation = -0.93375117
+scale = Vector2(1.9999999, 2.9999998)
+skew = 0.75921834
+shape = SubResource("RectangleShape2D_mac1l")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=447523190]
+position = Vector2(631, -324)
+scale = Vector2(2, 2.9999998)
+skew = 0.40666163
+shape = SubResource("RectangleShape2D_52yhg")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=131876166]
+position = Vector2(-787, 134)
+scale = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_gkpcj")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="." unique_id=788174607]
+position = Vector2(-676.5494, -340.62918)
+scale = Vector2(2, 2.9999998)
+skew = 0.49567354
+shape = SubResource("RectangleShape2D_7fblg")
