@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c7w4ic2foixb5"]
+
+[ext_resource type="Texture2D" uid="uid://bcl6io73q5mhv" path="res://skatepark_assets/hek_skatepark.png" id="1_4fakn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8td2"]
+size = Vector2(131, 3343)
+
+[node name="Wall" type="StaticBody2D" unique_id=597232485]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=868368517]
+position = Vector2(-1.5, -53.5)
+shape = SubResource("RectangleShape2D_c8td2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=445669902]
+position = Vector2(2.4330457e-06, -55.661602)
+rotation = 1.5707964
+scale = Vector2(15.809238, 1)
+texture = ExtResource("1_4fakn")

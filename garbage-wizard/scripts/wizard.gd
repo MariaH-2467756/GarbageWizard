@@ -3,7 +3,7 @@ extends CharacterBody2D
 signal hit
 
 var speed = 400
-var health = 3
+@export var health = 3
 var controls_active = true
 
 func _ready() -> void:
@@ -28,10 +28,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity = Vector2.ZERO
 
-func check_player_collision() -> void: # not finished
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		print("Collided with: ", collision.get_collider().name)
+#func check_player_collision() -> void: # not finished
+	#for i in get_slide_collision_count():
+		#var collision = get_slide_collision(i)
+		#if (collision.get_collider().is_in_group("enemy")):
+			#hit.emit()
 
 func start(pos : Vector2, given_health : int) -> void:
 	position = pos
@@ -42,7 +43,7 @@ func start(pos : Vector2, given_health : int) -> void:
 	
 	show()
 
-func got_hit() -> void:
+func take_hit() -> void:
 	health -= 1
 	$Sprite2D.modulate = Color(1, 0, 0, 0.5)
 	hit.emit()
@@ -50,9 +51,9 @@ func got_hit() -> void:
 	await get_tree().create_timer(0.1).timeout
 	$Sprite2D.modulate = Color(1.0, 1.0, 1.0, 1.0)
 
-func die() -> void:
-	health = 1
-	got_hit()
+#func die() -> void:
+	#health = 1
+	#got_hit()
 
 func delete() -> void:
 	queue_free()

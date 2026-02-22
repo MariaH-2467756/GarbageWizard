@@ -2,13 +2,11 @@ extends Node2D
 var portal_room = "res://scenes/portal_room.tscn"
 
 #######
-@export var garbage_max = 5 
-var garbage_collected = 0
 func on_garbage_cleaned(garbage_id: String):
 	if (GameState.on_garbage_cleaned(garbage_id)):
-		garbage_collected += 1
+		GameState.garbage_forest_max += 1
 		
-		if garbage_collected >= garbage_max:
+		if GameState.garbage_forest >= GameState.garbage_forest_max:
 			get_tree().change_scene_to_file(portal_room)
 #######
 

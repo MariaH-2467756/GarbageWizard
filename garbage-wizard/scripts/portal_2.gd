@@ -11,8 +11,7 @@ func _ready():
 	$Area2D.body_entered.connect(_on_body_entered)
 	$Area2D.body_exited.connect(_on_body_exited)
 	var scene = load(next_scene).instantiate()
-	print(str(scene.garbage_max))
-	label.text = str(scene.garbage_collected) + " / " + str(scene.garbage_max) 
+	label.text = str(GameState.garbage_skatepark) + " / " + str(GameState.garbage_skatepark_max)
 	scene.free()
 
 func _process(_delta):

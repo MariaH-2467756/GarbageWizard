@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://x1mi7d5ijfho"]
+
+[ext_resource type="Texture2D" uid="uid://duw0q8ywc3xg2" path="res://green_floor.png" id="1_bhqs7"]
+[ext_resource type="PackedScene" uid="uid://cor6wawmarlkf" path="res://scenes/dog.tscn" id="2_4a1ot"]
+[ext_resource type="PackedScene" uid="uid://c7w4ic2foixb5" path="res://scenes/dogPark_walls.tscn" id="2_44fvk"]
+[ext_resource type="PackedScene" uid="uid://cowti2n8sb5ep" path="res://scenes/garbage.tscn" id="4_44fvk"]
+
+[node name="DogPark" type="Node2D" unique_id=1091386557]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2115720634]
+z_index = -1
+position = Vector2(16.000053, 261.99994)
+scale = Vector2(0.892, 0.85719997)
+texture = ExtResource("1_bhqs7")
+metadata/_edit_lock_ = true
+
+[node name="Walls" type="Node2D" parent="." unique_id=546061523]
+metadata/_edit_lock_ = true
+
+[node name="Wall" parent="Walls" unique_id=597232485 instance=ExtResource("2_44fvk")]
+position = Vector2(1605, 327)
+
+[node name="Wall2" parent="Walls" unique_id=1638089668 instance=ExtResource("2_44fvk")]
+position = Vector2(-1592, 318)
+
+[node name="Wall3" parent="Walls" unique_id=1853049406 instance=ExtResource("2_44fvk")]
+position = Vector2(-25, 1867)
+rotation = 1.5707964
+
+[node name="Wall4" parent="Walls" unique_id=200229805 instance=ExtResource("2_44fvk")]
+position = Vector2(-34, -1348)
+rotation = 1.5707964
+
+[node name="Dogs" type="Node2D" parent="." unique_id=1612297108]
+metadata/_edit_lock_ = true
+
+[node name="Dog" parent="Dogs" unique_id=914402770 instance=ExtResource("2_4a1ot")]
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog2" parent="Dogs" unique_id=428785012 instance=ExtResource("2_4a1ot")]
+position = Vector2(0, 545)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog3" parent="Dogs" unique_id=1196818886 instance=ExtResource("2_4a1ot")]
+position = Vector2(1107, 1296)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog4" parent="Dogs" unique_id=55199120 instance=ExtResource("2_4a1ot")]
+position = Vector2(636, -243)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog5" parent="Dogs" unique_id=1052176283 instance=ExtResource("2_4a1ot")]
+position = Vector2(1043, 280)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog6" parent="Dogs" unique_id=938150866 instance=ExtResource("2_4a1ot")]
+position = Vector2(1034, -795)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog7" parent="Dogs" unique_id=1387919769 instance=ExtResource("2_4a1ot")]
+position = Vector2(-37, -859)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog8" parent="Dogs" unique_id=1526357670 instance=ExtResource("2_4a1ot")]
+position = Vector2(-937, -845)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog9" parent="Dogs" unique_id=1768797868 instance=ExtResource("2_4a1ot")]
+position = Vector2(-942, 289)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog10" parent="Dogs" unique_id=20728123 instance=ExtResource("2_4a1ot")]
+position = Vector2(-937, 1378)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog11" parent="Dogs" unique_id=1304046298 instance=ExtResource("2_4a1ot")]
+position = Vector2(-600, -361)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog12" parent="Dogs" unique_id=749385123 instance=ExtResource("2_4a1ot")]
+position = Vector2(562, 962)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog13" parent="Dogs" unique_id=1832090105 instance=ExtResource("2_4a1ot")]
+position = Vector2(-612, 979)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog14" parent="Dogs" unique_id=568193531 instance=ExtResource("2_4a1ot")]
+position = Vector2(6, 1440)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog15" parent="Dogs" unique_id=1184568814 instance=ExtResource("2_4a1ot")]
+position = Vector2(-395, -89)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog16" parent="Dogs" unique_id=1028798121 instance=ExtResource("2_4a1ot")]
+position = Vector2(239, -784)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog17" parent="Dogs" unique_id=529182296 instance=ExtResource("2_4a1ot")]
+position = Vector2(617, 473)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog18" parent="Dogs" unique_id=2103245325 instance=ExtResource("2_4a1ot")]
+position = Vector2(-990, -450)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog19" parent="Dogs" unique_id=252420473 instance=ExtResource("2_4a1ot")]
+position = Vector2(-639, -817)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog20" parent="Dogs" unique_id=519676448 instance=ExtResource("2_4a1ot")]
+position = Vector2(-395, 1024)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog21" parent="Dogs" unique_id=2052114944 instance=ExtResource("2_4a1ot")]
+position = Vector2(890, -78)
+scale = Vector2(0.25, 0.25)
+
+[node name="Dog22" parent="Dogs" unique_id=1840187792 instance=ExtResource("2_4a1ot")]
+position = Vector2(-1034, 828)
+scale = Vector2(0.25, 0.25)
+
+[node name="Garbage" parent="." unique_id=445665388 instance=ExtResource("4_44fvk")]
+position = Vector2(701, 1362)
+garbage_id = "9"
+
+[node name="Garbage2" parent="." unique_id=626319118 instance=ExtResource("4_44fvk")]
+position = Vector2(756, -606)
+garbage_id = "10"
+
+[node name="Garbage3" parent="." unique_id=581290524 instance=ExtResource("4_44fvk")]
+position = Vector2(-962, -1062)
+garbage_id = "11"
+
+[node name="Garbage4" parent="." unique_id=1076920262 instance=ExtResource("4_44fvk")]
+position = Vector2(-823, 606)
+garbage_id = "12"
+
+[node name="Garbage5" parent="." unique_id=960995913 instance=ExtResource("4_44fvk")]
+position = Vector2(-1329, 1618)
+garbage_id = "13"

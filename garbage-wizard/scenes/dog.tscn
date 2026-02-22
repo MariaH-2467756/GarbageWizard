@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cor6wawmarlkf"]
+
+[ext_resource type="Texture2D" uid="uid://dao78qibx7nqc" path="res://hond1-removebg-preview.png" id="1_on80e"]
+[ext_resource type="Script" uid="uid://dnho5kl62yxru" path="res://scenes/dog.gd" id="1_vwjdu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vwjdu"]
+radius = 69.0
+height = 360.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qjqk5"]
+radius = 69.065186
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gmowd"]
+radius = 4682.3633
+
+[node name="Dog" type="CharacterBody2D" unique_id=914402770]
+script = ExtResource("1_vwjdu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=444916032]
+position = Vector2(-46, 14)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_vwjdu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=413022292]
+position = Vector2(0, 4)
+texture = ExtResource("1_on80e")
+
+[node name="Bite" type="Area2D" parent="." unique_id=700672536]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bite" unique_id=840488254]
+position = Vector2(225, -36)
+shape = SubResource("CircleShape2D_qjqk5")
+
+[node name="Radius" type="Area2D" parent="." unique_id=352359549]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Radius" unique_id=794637846]
+shape = SubResource("CircleShape2D_gmowd")
+
+[node name="DashLine" type="Line2D" parent="." unique_id=1060841980]
+points = PackedVector2Array(1165, 153)

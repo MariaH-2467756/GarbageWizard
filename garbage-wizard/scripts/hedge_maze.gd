@@ -8,13 +8,11 @@ var time_left = 0.0
 
 #Garbage collection
 #######
-@export var garbage_max = 3 
-var garbage_collected = 0
 func on_garbage_cleaned(garbage_id: String):
 	if (GameState.on_garbage_cleaned(garbage_id)):
-		garbage_collected += 1
+		GameState.garbage_maze += 1
 		
-		if garbage_collected >= garbage_max:
+		if GameState.garbage_maze >= GameState.garbage_maze_max:
 			get_tree().change_scene_to_file(portal_room)
 #######
 

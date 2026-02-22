@@ -130,6 +130,7 @@ rotation = -1.5707964
 position = Vector2(-23, -470)
 rotation = 1.5707964
 script = ExtResource("6_nwsrt")
+next_scene = "res://scenes/dog_park.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portals/Portal3" unique_id=1316194772]
 position = Vector2(0, 1)

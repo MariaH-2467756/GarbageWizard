@@ -41,7 +41,6 @@ func _on_body_exited(body):
 
 func _on_hit_player(body):
 	if body == Wizard:
-		$Sprite2D.modulate = Color(1, 0, 0, 0.5)
-		Wizard.got_hit()
+		Wizard.take_hit()
 		await get_tree().create_timer(0.1).timeout
 		queue_free()

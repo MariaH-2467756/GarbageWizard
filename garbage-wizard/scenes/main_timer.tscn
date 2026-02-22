@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b1gvs78a5k53o" path="res://scripts/main_timer.gd" id="1_j175b"]
 
-[node name="MainTimer" type="CanvasLayer"]
+[node name="MainTimer" type="CanvasLayer" unique_id=1765933307]
 script = ExtResource("1_j175b")
 
-[node name="Timer" type="Label" parent="."]
+[node name="Timer" type="Label" parent="." unique_id=6984695]
 offset_right = 94.0
 offset_bottom = 46.0

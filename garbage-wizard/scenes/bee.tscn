@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://oif0wbrm663e"]
+
+[ext_resource type="Script" uid="uid://dgf7g0hi2m245" path="res://scripts/bee.gd" id="1_vie5o"]
+[ext_resource type="Texture2D" uid="uid://5iwhkqjsbefo" path="res://2026_02_21_0u8_Kleki.png" id="2_ogg2i"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4dot8"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_50yv8"]
+radius = 5.2153616
+
+[node name="Bee" type="CharacterBody2D" unique_id=912184800 groups=["enemy"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_vie5o")
+
+[node name="BeeShape" type="CollisionShape2D" parent="." unique_id=1750145046]
+position = Vector2(-1.0600004, -3.380002)
+scale = Vector2(0.02, 0.02)
+shape = SubResource("CapsuleShape2D_4dot8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1111929747]
+position = Vector2(0.9399998, 0.6199999)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_ogg2i")
+
+[node name="HitArea" type="Area2D" parent="." unique_id=1717189736]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea" unique_id=1929191897]
+position = Vector2(0, -2.3999999)
+shape = SubResource("CircleShape2D_50yv8")
