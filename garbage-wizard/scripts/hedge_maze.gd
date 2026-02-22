@@ -8,10 +8,10 @@ var time_left = 0.0
 
 #Garbage collection
 #######
-@export var garbage_max = 5 
+@export var garbage_max = 3 
 var garbage_collected = 0
-func on_trash_cleaned(garbage_id: String):
-	if (GameState.clean_trash(garbage_id)):
+func on_garbage_cleaned(garbage_id: String):
+	if (GameState.on_garbage_cleaned(garbage_id)):
 		garbage_collected += 1
 		
 		if garbage_collected >= garbage_max:
@@ -19,8 +19,9 @@ func on_trash_cleaned(garbage_id: String):
 #######
 
 func _ready():
-	Wizard.position = Vector2(0, 0)
+	Wizard.start(Vector2(0, 0), 3)
 	time_elapsed = 0.0
+	
 
 func _process(delta):
 	time_elapsed += delta

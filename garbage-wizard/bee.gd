@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 80.0 # seconds to retreat after hitting player
+@export var speed = 100.0 # seconds to retreat after hitting player
 
 var target_position: Vector2
 var chasing = false
@@ -41,6 +41,7 @@ func _on_body_exited(body):
 
 func _on_hit_player(body):
 	if body == Wizard:
-		$Sprite2D.modulate = Color(1, 0, 0, 0.5)  # red and transparent
+		$Sprite2D.modulate = Color(1, 0, 0, 0.5)
+		Wizard.got_hit()
 		await get_tree().create_timer(0.1).timeout
 		queue_free()

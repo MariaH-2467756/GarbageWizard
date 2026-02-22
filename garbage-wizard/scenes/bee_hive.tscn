@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dtv361qgmbaj1" path="res://2026_02_21_0ud_Kleki.png" id="3_gulqx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_atyi6"]
-radius = 1250.314
+radius = 121.45782
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4dot8"]
 radius = 5.0

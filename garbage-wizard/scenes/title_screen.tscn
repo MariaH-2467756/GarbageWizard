@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dq1vvx8mtu6rp"]
 
-[ext_resource type="Script" uid="uid://de1my5leylfie" path="res://scenes/title_screen.gd" id="1_sa3yf"]
+[ext_resource type="Script" uid="uid://de1my5leylfie" path="res://title_screen.gd" id="1_sa3yf"]
 [ext_resource type="FontFile" uid="uid://dbad0n42iah6j" path="res://fonts/Aurora.otf" id="1_v6p8y"]
 
 [node name="TitleScreen" type="CanvasLayer" unique_id=1964465023]

@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dn65wcjafnceq"]
+
+[ext_resource type="PackedScene" uid="uid://cqf1k51kfywx" path="res://scenes/tree.tscn" id="1_1csuu"]
+[ext_resource type="PackedScene" uid="uid://bltrxp37fjumo" path="res://scenes/tree_with_hive.tscn" id="2_4hh1x"]
+
+[node name="TreeGroup" type="Node2D" unique_id=1315588931]
+
+[node name="Tree" parent="." unique_id=947907566 instance=ExtResource("1_1csuu")]
+position = Vector2(-621, -737)
+
+[node name="TreeWithHive" parent="." unique_id=101224837 instance=ExtResource("2_4hh1x")]
+position = Vector2(-555, 4)
+
+[node name="Tree2" parent="." unique_id=1386980003 instance=ExtResource("1_1csuu")]
+position = Vector2(-372, 575)
+
+[node name="Tree3" parent="." unique_id=261375075 instance=ExtResource("1_1csuu")]
+position = Vector2(-22, -603)
+
+[node name="Tree4" parent="." unique_id=753700028 instance=ExtResource("1_1csuu")]
+position = Vector2(-1186, -347)
+
+[node name="Tree5" parent="." unique_id=1144316852 instance=ExtResource("1_1csuu")]
+position = Vector2(-950, 467)
+
+[node name="Tree6" parent="." unique_id=301247069 instance=ExtResource("1_1csuu")]
+position = Vector2(99, 90)
+
+[node name="Tree7" parent="." unique_id=1212672190 instance=ExtResource("1_1csuu")]
+position = Vector2(-311, -596)
+
+[node name="Tree8" parent="." unique_id=936346507 instance=ExtResource("1_1csuu")]
+position = Vector2(-870, -522)
+
+[node name="Tree9" parent="." unique_id=624178849 instance=ExtResource("1_1csuu")]
+position = Vector2(-1139, 211)
+
+[node name="Tree10" parent="." unique_id=1547480935 instance=ExtResource("1_1csuu")]
+position = Vector2(-29, 413)
+
+[node name="Tree11" parent="." unique_id=1706701389 instance=ExtResource("1_1csuu")]
+position = Vector2(-533, 507)
+
+[node name="Tree12" parent="." unique_id=328433276 instance=ExtResource("1_1csuu")]
+position = Vector2(66, -226)
+
+[node name="Tree13" parent="." unique_id=1183270464 instance=ExtResource("1_1csuu")]
+position = Vector2(-930, -152)
+
+[node name="Tree14" parent="." unique_id=707057528 instance=ExtResource("1_1csuu")]
+position = Vector2(-271, 245)
+
+[node name="Tree15" parent="." unique_id=270882286 instance=ExtResource("1_1csuu")]
+position = Vector2(-769, 218)
+
+[node name="Tree16" parent="." unique_id=1092957143 instance=ExtResource("1_1csuu")]
+position = Vector2(-251, -233)
+
+[node name="Tree17" parent="." unique_id=1290680318 instance=ExtResource("1_1csuu")]
+position = Vector2(-553, -414)

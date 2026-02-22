@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bltrxp37fjumo"]
+
+[ext_resource type="Texture2D" uid="uid://cpxwkhal76r05" path="res://tree.png" id="1_vv365"]
+[ext_resource type="PackedScene" uid="uid://bcpq06bf1bwsd" path="res://scenes/bee_hive.tscn" id="2_ystfh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i1yi8"]
+radius = 25.0
+height = 76.0
+
+[node name="TreeWithHive" type="StaticBody2D" unique_id=101224837]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2144621675]
+position = Vector2(1, -129)
+texture = ExtResource("1_vv365")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=917950430]
+position = Vector2(2, -40)
+shape = SubResource("CapsuleShape2D_i1yi8")
+
+[node name="BeeHive" parent="." unique_id=548601961 instance=ExtResource("2_ystfh")]
+position = Vector2(70.99999, -147.99998)

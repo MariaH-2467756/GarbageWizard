@@ -1,8 +1,55 @@
 [gd_scene format=3 uid="uid://b7i6tvau8nhqp"]
 
-[ext_resource type="Script" uid="uid://cenebennp4kdu" path="res://scenes/forest.gd" id="1_xijx7"]
+[ext_resource type="Script" uid="uid://cenebennp4kdu" path="res://scripts/forest.gd" id="1_xijx7"]
+[ext_resource type="PackedScene" uid="uid://cnf0tl3428t0p" path="res://scenes/big_tree_group.tscn" id="2_bgcxa"]
+[ext_resource type="Texture2D" uid="uid://duw0q8ywc3xg2" path="res://green_floor.png" id="4_sek5r"]
+[ext_resource type="PackedScene" uid="uid://cowti2n8sb5ep" path="res://scenes/garbage.tscn" id="4_yj5dr"]
 
 [node name="Forest" type="Node2D" unique_id=756021440]
 script = ExtResource("1_xijx7")
 
 [node name="Trees" type="Node2D" parent="." unique_id=2085645410]
+
+[node name="BigTreeGroup" parent="Trees" unique_id=770882733 instance=ExtResource("2_bgcxa")]
+position = Vector2(-3187, 2386)
+
+[node name="BigTreeGroup13" parent="Trees" unique_id=274717240 instance=ExtResource("2_bgcxa")]
+position = Vector2(-3203, -5394)
+
+[node name="BigTreeGroup14" parent="Trees" unique_id=2015217723 instance=ExtResource("2_bgcxa")]
+position = Vector2(4836, -5053)
+
+[node name="BigTreeGroup15" parent="Trees" unique_id=889657872 instance=ExtResource("2_bgcxa")]
+position = Vector2(5880, 2073)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=608890758]
+z_index = -1
+position = Vector2(827.251, 235.99902)
+scale = Vector2(4.5113006, 4.0256)
+texture = ExtResource("4_sek5r")
+metadata/_edit_lock_ = true
+
+[node name="forestBorder" type="StaticBody2D" parent="." unique_id=134808419]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="forestBorder" unique_id=1389200731]
+polygon = PackedVector2Array(-6095, 8384, -9600, 3810, -7437, 749, -6540, 100, -9477, -4104, -7816, -7156, -5915, -8242, -2657, -8966, -213, -8016, 5218, -8333, 8930, -6477, 8930, -3264, 8794, -367, 10016, 900, 10106, 3797, 8703, 7101, 2639, 7825, 919, 5743, -665, 7508, -6187, 8413, -10441, 10179, 12053, 10224, 11962, -9826, -10441, -9871, -10241, 10001)
+
+[node name="Garbage" parent="." unique_id=445665388 instance=ExtResource("4_yj5dr")]
+position = Vector2(-8176, 5287)
+garbage_id = "4"
+
+[node name="Garbage2" parent="." unique_id=38501886 instance=ExtResource("4_yj5dr")]
+position = Vector2(-7648, -6464)
+garbage_id = "5"
+
+[node name="Garbage3" parent="." unique_id=597222925 instance=ExtResource("4_yj5dr")]
+position = Vector2(8507, 7040)
+garbage_id = "6"
+
+[node name="Garbage4" parent="." unique_id=587610123 instance=ExtResource("4_yj5dr")]
+position = Vector2(8283, -4708)
+garbage_id = "7"
+
+[node name="Garbage5" parent="." unique_id=1360856040 instance=ExtResource("4_yj5dr")]
+position = Vector2(8660, -111)
+garbage_id = "8"

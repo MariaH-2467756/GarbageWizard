@@ -2,7 +2,7 @@ extends StaticBody2D
 
 @onready var prompt = $EButton  # your E button image
 var player_nearby = false
-var garbage_id: String = get_path() ## path is unique so unique id.
+@export var garbage_id: String = ""## doesnt work get_path() ## path is unique so unique id.
 
 func _ready():
 	prompt.visible = false

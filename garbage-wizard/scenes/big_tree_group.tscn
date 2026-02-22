@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://cnf0tl3428t0p"]
+
+[ext_resource type="PackedScene" uid="uid://dn65wcjafnceq" path="res://scenes/tree_group.tscn" id="1_wjrje"]
+
+[node name="BigTreeGroup" type="Node2D" unique_id=770882733]
+
+[node name="TreeGroup" parent="." unique_id=1315588931 instance=ExtResource("1_wjrje")]
+
+[node name="TreeGroup2" parent="." unique_id=2067634767 instance=ExtResource("1_wjrje")]
+position = Vector2(3881, 374)
+
+[node name="TreeGroup3" parent="." unique_id=166560015 instance=ExtResource("1_wjrje")]
+position = Vector2(3388, -2157)
+
+[node name="TreeGroup4" parent="." unique_id=1962571994 instance=ExtResource("1_wjrje")]
+position = Vector2(847, -2876)
+
+[node name="TreeGroup5" parent="." unique_id=1845518281 instance=ExtResource("1_wjrje")]
+position = Vector2(-2118, -2285)
+
+[node name="TreeGroup6" parent="." unique_id=302050014 instance=ExtResource("1_wjrje")]
+position = Vector2(-571, -2531)
+
+[node name="TreeGroup7" parent="." unique_id=262007001 instance=ExtResource("1_wjrje")]
+position = Vector2(-3053, 394)
+
+[node name="TreeGroup8" parent="." unique_id=568671450 instance=ExtResource("1_wjrje")]
+position = Vector2(-2118, 1625)
+
+[node name="TreeGroup9" parent="." unique_id=1373654782 instance=ExtResource("1_wjrje")]
+position = Vector2(2496, 1007)
+
+[node name="TreeGroup10" parent="." unique_id=714002337 instance=ExtResource("1_wjrje")]
+position = Vector2(-2393, -855)
+
+[node name="TreeGroup11" parent="." unique_id=1503713940 instance=ExtResource("1_wjrje")]
+position = Vector2(2939, -708)
+
+[node name="TreeGroup12" parent="." unique_id=576503666 instance=ExtResource("1_wjrje")]
+position = Vector2(1946, -1783)
+
+[node name="TreeGroup13" parent="." unique_id=621310810 instance=ExtResource("1_wjrje")]
+position = Vector2(1490, -342)
+
+[node name="TreeGroup14" parent="." unique_id=208848564 instance=ExtResource("1_wjrje")]
+position = Vector2(-464, 1359)
+
+[node name="TreeGroup15" parent="." unique_id=31509078 instance=ExtResource("1_wjrje")]
+position = Vector2(-1473, 269)
+
+[node name="TreeGroup16" parent="." unique_id=1012698430 instance=ExtResource("1_wjrje")]
+position = Vector2(-922, -1184)
+
+[node name="TreeGroup17" parent="." unique_id=1210035381 instance=ExtResource("1_wjrje")]
+position = Vector2(498, -1460)
+
+[node name="TreeGroup18" parent="." unique_id=1290676429 instance=ExtResource("1_wjrje")]
+position = Vector2(1009, 1103)
+
+[node name="TreeGroup19" parent="." unique_id=710678523 instance=ExtResource("1_wjrje")]
+position = Vector2(1040, 4048)
+
+[node name="TreeGroup20" parent="." unique_id=1499838078 instance=ExtResource("1_wjrje")]
+position = Vector2(1747, 2360)
+
+[node name="TreeGroup21" parent="." unique_id=1328857982 instance=ExtResource("1_wjrje")]
+position = Vector2(-517, 4206)
+
+[node name="TreeGroup22" parent="." unique_id=1027407253 instance=ExtResource("1_wjrje")]
+position = Vector2(-3661, 4206)
+
+[node name="TreeGroup23" parent="." unique_id=754340224 instance=ExtResource("1_wjrje")]
+position = Vector2(-2096, 4160)
+
+[node name="TreeGroup24" parent="." unique_id=465867862 instance=ExtResource("1_wjrje")]
+position = Vector2(-4491, 2925)
+
+[node name="TreeGroup25" parent="." unique_id=359722969 instance=ExtResource("1_wjrje")]
+position = Vector2(-5282, 1603)
+
+[node name="TreeGroup26" parent="." unique_id=60163070 instance=ExtResource("1_wjrje")]
+position = Vector2(-3938, -1062)
+
+[node name="TreeGroup27" parent="." unique_id=897881008 instance=ExtResource("1_wjrje")]
+position = Vector2(-4545, 325)
+
+[node name="TreeGroup28" parent="." unique_id=908860684 instance=ExtResource("1_wjrje")]
+position = Vector2(266, 2708)
+
+[node name="TreeGroup29" parent="." unique_id=1341280169 instance=ExtResource("1_wjrje")]
+position = Vector2(-1316, 2914)
+
+[node name="TreeGroup30" parent="." unique_id=169114059 instance=ExtResource("1_wjrje")]
+position = Vector2(-2909, 2936)
+
+[node name="TreeGroup31" parent="." unique_id=1441797756 instance=ExtResource("1_wjrje")]
+position = Vector2(-3830, 1658)
+
+[node name="TreeGroup32" parent="." unique_id=1666958632 instance=ExtResource("1_wjrje")]
+position = Vector2(3898, 3713)
+
+[node name="TreeGroup33" parent="." unique_id=1799065355 instance=ExtResource("1_wjrje")]
+position = Vector2(4397, -1009)
+
+[node name="TreeGroup34" parent="." unique_id=123198746 instance=ExtResource("1_wjrje")]
+position = Vector2(4589, 1813)
+
+[node name="TreeGroup35" parent="." unique_id=549003661 instance=ExtResource("1_wjrje")]
+position = Vector2(3187, 2465)
+
+[node name="TreeGroup36" parent="." unique_id=1216646513 instance=ExtResource("1_wjrje")]
+position = Vector2(2439, 3655)
+
+[node name="TreeGroup37" parent="." unique_id=1307903074 instance=ExtResource("1_wjrje")]
+position = Vector2(-1054, 5517)
+
+[node name="TreeGroup38" parent="." unique_id=1570008447 instance=ExtResource("1_wjrje")]
+position = Vector2(1863, 5191)
+
+[node name="TreeGroup39" parent="." unique_id=382735048 instance=ExtResource("1_wjrje")]
+position = Vector2(3245, 5018)
+
+[node name="TreeGroup40" parent="." unique_id=1368522399 instance=ExtResource("1_wjrje")]
+position = Vector2(462, 5460)
+
+[node name="TreeGroup41" parent="." unique_id=870221981 instance=ExtResource("1_wjrje")]
+position = Vector2(-2666, 5555)

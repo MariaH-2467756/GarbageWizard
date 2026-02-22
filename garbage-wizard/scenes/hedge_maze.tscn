@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dr67gb6dn5enq" path="res://maze_sprite.png" id="1_ncrhu"]
 [ext_resource type="Script" uid="uid://cqags88vdcash" path="res://scripts/hedge_maze.gd" id="1_ta10t"]
+[ext_resource type="PackedScene" uid="uid://cowti2n8sb5ep" path="res://scenes/garbage.tscn" id="3_oqv4m"]
 
 [node name="HedgeMaze" type="Node2D" unique_id=1685662242]
 script = ExtResource("1_ta10t")
@@ -32,3 +33,15 @@ theme_override_font_sizes/font_size = 48
 horizontal_alignment = 1
 autowrap_mode = 3
 uppercase = true
+
+[node name="Garbage" parent="." unique_id=445665388 instance=ExtResource("3_oqv4m")]
+position = Vector2(-1696, -2001)
+garbage_id = "1"
+
+[node name="Garbage2" parent="." unique_id=1245254052 instance=ExtResource("3_oqv4m")]
+position = Vector2(2180, 1460)
+garbage_id = "2"
+
+[node name="Garbage3" parent="." unique_id=335330893 instance=ExtResource("3_oqv4m")]
+position = Vector2(-715, 2463)
+garbage_id = "3"
