@@ -34,8 +34,8 @@ func new_game() -> void:
 func open_titlescreen() -> void:
 	$GameOverScreen.hide()
 	$TitleScreen.show()
-	
-	#a function to call wel telporting with player animation.
+
+#a function to call wel telporting with player animation.
 func teleport():
 	await (get_tree().create_timer(1).timeout)
 	Wizard.position = $StartPosition.position

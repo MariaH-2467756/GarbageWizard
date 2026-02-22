@@ -35,15 +35,17 @@ func mob_movement(delta: float) -> void:
 	
 	$AnimatedSprite2D.play()
 	if direction >= 0:
+		$AnimatedSprite2D.flip_v = false
 		if speed > 0:
 			$AnimatedSprite2D.animation = "skate_right"
 		else:
 			$AnimatedSprite2D.animation = "skate_left"
 	else:
+		$AnimatedSprite2D.flip_v = true
 		if speed > 0:
-			$AnimatedSprite2D.animation = "skate_left"
-		else:
 			$AnimatedSprite2D.animation = "skate_right"
+		else:
+			$AnimatedSprite2D.animation = "skate_left"
 	
 	if delta_position > bound:
 		if wrap_around:
@@ -54,7 +56,9 @@ func mob_movement(delta: float) -> void:
 			change_direction()
 	
 	rotation = angular_speed * direction
-	position += input_vector.rotated(rotation) * speed * delta
+	var velocity = input_vector.rotated(rotation) * speed * delta
+	
+	move_and_collide(velocity)
 
 func change_direction() -> void:
 	speed = speed * -1
